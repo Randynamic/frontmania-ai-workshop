@@ -1,0 +1,25 @@
+{
+  "role": "Backend engineer (Node.js) moving into front-end work",
+  "seniority": "senior",
+  "stack": [
+    "TypeScript",
+    "Node.js",
+    "Fastify",
+    "Kafka",
+    "PostgreSQL",
+    "Docker",
+    "OpenTelemetry",
+    "Vitest",
+    "Web Components",
+    "Vite"
+  ],
+  "interests": [
+    "browser fundamentals",
+    "navigation and prefetching",
+    "programming principles for UI code",
+    "framework-free reactive UI",
+    "web performance",
+    "BFF and authentication patterns"
+  ],
+  "avoid": ["design-tool workflows", "marketing talks", "React-experience-assumed talks"]
+}

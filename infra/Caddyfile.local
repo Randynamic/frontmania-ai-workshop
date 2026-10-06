@@ -1,0 +1,45 @@
+# Local parity: same routes as Caddyfile, no TLS, no basic auth.
+#   http://localhost:8080  = workshop gateway (proxy, otel, backend)
+#   http://localhost:8081  = MLflow UI
+{
+	admin off
+	auto_https off
+}
+
+:8080 {
+	encode gzip
+
+	handle_path /proxy/* {
+		reverse_proxy litellm:4000
+	}
+
+	handle /otel/* {
+		# Participants may only send spans (POST /otel/v1/traces) and read GET /otel/health.
+		# Every other MLflow REST path (trace search, artifacts, experiment delete, prompt
+		# aliases) answers 404, so a participant key never reaches the trainer-only API.
+		@otelAllowed expression `({method} == 'POST' && {path} == '/otel/v1/traces') || ({method} == 'GET' && {path} == '/otel/health')`
+		handle @otelAllowed {
+			# The backend answers 200 when the bearer key exists and is not revoked.
+			forward_auth backend:3000 {
+				uri /api/auth
+			}
+			uri strip_prefix /otel
+			reverse_proxy mlflow:5000 {
+				# MLflow needs no auth inside the network; never forward the participant key.
+				header_up -Authorization
+				header_up x-mlflow-experiment-id {$MLFLOW_EXPERIMENT_ID}
+			}
+		}
+		handle {
+			respond 404
+		}
+	}
+
+	handle {
+		reverse_proxy backend:3000
+	}
+}
+
+:8081 {
+	reverse_proxy mlflow:5000
+}

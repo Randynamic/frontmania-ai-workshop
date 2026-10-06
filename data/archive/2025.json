@@ -1,0 +1,338 @@
+{
+  "year": 2025,
+  "source": "https://sessionize.com/api/v2/ary2w1mc/view/Sessions?under=true",
+  "snapshotAt": "2026-09-26T11:01:58.945Z",
+  "fixture": false,
+  "talks": [
+    {
+      "id": "fm25-1015786",
+      "year": 2025,
+      "title": "Why Reactive Functional Is My Paradigm of Choice",
+      "speakers": [
+        "Bart Kuijper"
+      ],
+      "abstract": "Why is reactive functional programming so popular to teach, yet not adopted by the masses? And why might now be the time to get your reactive functional game on?\n\nCome with me on my personal journey into reactive functional programming, where I argue that I’m just like you (except for the time I signed a contract on the topic), where we conquer time and space, and together discover why it’s the most 'satisfactory' way to write code. In this hopeful, AI-free talk, my aim is to inspire you to care about reactive functional programming and perhaps even dive into it yourself.",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-977014",
+      "year": 2025,
+      "title": "Building Karaoke in the Browser: Web APIs That Actually Rock",
+      "speakers": [
+        "Jorrik Klijnsma"
+      ],
+      "abstract": "What if you could build a fully functional karaoke app using nothing but modern web technologies? No native apps, no desktop software, just HTML, CSS, and JavaScript.\n\nIn this talk, Jorrik will show you how to create a karaoke experience from scratch using Web Audio API, Canvas, and a bunch of other web APIs you probably haven't played with yet. We'll tackle the fun stuff: syncing lyrics to audio, creating that bouncing ball effect, building visualizations, and making it all perform smoothly at 60fps.\n\nBut here's the twist, while we're building something fun, we're actually learning techniques that'll make you a better developer in your day job. The timing precision needed for karaoke? That's the same stuff you need for smooth animations or data hadnling in enterprise apps. The audio processing? Perfect for building better video conferencing tools.\n\nJorrik will take you through the core features, show you how to handle the tricky bits (audio sync is harder than it looks), and share some battle-tested patterns for high-performance web apps. And if the conference is up for it, we might just end the day with an actual karaoke party using the app we built.",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-975428",
+      "year": 2025,
+      "title": "Generating a podcast, entirely focused on your interests",
+      "speakers": [
+        "Ruben van der Leun"
+      ],
+      "abstract": "For the longest time, Ruben has had an issue where he needed to pick a podcast to listen to while walking the dogs. Which, with the vast amount of podcasts available, is more difficult than you would expect. He decided to try and see whether he could have a LLM-powered news podcast ready every day that would be centered around his interests. AI Slop or not? Let's find out.\n\nThis talk will go through the pipeline of rss-feeds-to-podcast, a project that allows the user to generate a podcast based on articles from selected RSS feeds, entirely built with Nest.JS. Its focus will be on high-level concepts to explain the pipeline, and from the POV of a developer with an hobbyist enthusiasm for LLMs.\n\nAll of this as an open-source project, using self-hosted services. No paid subscription required!",
+      "room": "Mission 1",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-995947",
+      "year": 2025,
+      "title": "Shift Left: Accessibility beyond the Audit",
+      "speakers": [
+        "Ramona Domen"
+      ],
+      "abstract": "The European Accessibility Act is now in effect, and you've done the hard work. Your app has passed its accessibility audit and complies with the latest legal standards. An Amazing milestone, but accessibility isn't a one-time fix! It's an ongoing commitment.\n\nSo, what happens next? How do you ensure your application stays accessible as your codebase evolves?\n\nIn this talk, we'll explore practical strategies for maintaining accessibility long after the initial audit. We'll look at how to embed accessibility into your development workflow, from automated tests to manual checks, and discuss where automation falls short. I’ll share my favorite tools and testing techniques, and explore practices that help prevent regression.\n\nYou'll leave with actionable insights to future-proof the accessibility of your application and ensure your update don't moves your application backward.",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-1016031",
+      "year": 2025,
+      "title": "The Web Components Compass",
+      "speakers": [
+        "Tom Herni"
+      ],
+      "abstract": "Web components: loved by some, criticized by others. They offer framework-agnostic building blocks, but also come with quirks and challenges. Are they worth it? In this talk, we’ll explore what web components are, how to use them effectively, and when to avoid them. You’ll leave with a clearer understanding of their role in modern front-end development—and whether they’re the right fit for your project.",
+      "room": "Expedition",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-994235",
+      "year": 2025,
+      "title": "If It’s Not Accessible, It’s Not a Design System",
+      "speakers": [
+        "Dennis Spierenburg"
+      ],
+      "abstract": "Many teams want to build accessible products, but accessibility often slips through the cracks during development. Perhaps a modal does not trap focus properly, or someone removes the focus ring because it does not align with the design. These small oversights can make a product frustrating or even impossible to use for people who rely on a keyboard or screen reader.\n\nThe problem is not that developers do not care, but that most systems do not help them make the right choices by default. In this talk, I will demonstrate how to incorporate accessibility into your components from the start, utilizing React and design system patterns. We will look at how compound components can enforce the correct structure, how tokens help maintain contrast and motion preferences, and how tools like TypeScript and linters can support developers without getting in the way.\n\nAlong the way, I will live-code more complex components and think out loud through the accessibility challenges, showing how to align with WCAG practically. Whether you are starting fresh or improving an existing setup, this talk gives you tools and mental models to build accessible products with confidence.",
+      "room": "Quest",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-955312",
+      "year": 2025,
+      "title": "Strong types, blinking lights: Learning advanced TypeScript with Arduino",
+      "speakers": [
+        "Soumaya Erradi"
+      ],
+      "abstract": "Explore the power of advanced TypeScript features by bringing hardware to life!\nIn this talk, we’ll bring hardware to life using TypeScript and an Arduino, transforming sensors, servos and LEDs into a playground for learning advanced language features.\nWith the help of Johnny-Five, we’ll explore how enums, discriminated unions, branded types, and many more can make your embedded code as safe and expressive as your Typescript apps.\nIt’s TypeScript like you’ve never seen it: blinking, sensing, and moving in the real world.",
+      "room": "Workshop area",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-1018806",
+      "year": 2025,
+      "title": "Web containers and server in client concept",
+      "speakers": [
+        "Jafar Rezaei"
+      ],
+      "abstract": "WebContainers bring full Node.js environments directly into your browser — no installs, no setup. Powered by WebAssembly and modern browser APIs, your browser essentially acts like an operating system. That's how tools like StackBlitz (bolt.new) let you click a link and start coding in seconds, even offline.\n\nWhat excites me about this is how it flips the whole idea of development environments. No more spinning up servers or wrestling with setup — just open a tab, and boom, you're coding. It feels almost native, it's sandboxed and safe, and it finally kills the classic \"works on my machine\" problem while making learning, teaching, and experimenting ridiculously easy.",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-954486",
+      "year": 2025,
+      "title": "One Small Model for Chrome, One Giant Leap for Built-in AI",
+      "speakers": [
+        "Rowdy Rabouw"
+      ],
+      "abstract": "Discover how Google's Gemini Nano model is a breakthrough for AI in the browser. Like NASA's Gemini spaceflight preceded the Apollo moon landings, Gemini Nano is the stepping stone to an age of powerful AI running locally on every device, starting with Chrome.\n\nThis session will explore advanced AI capabilities such as text summarisation, image recognition, and intelligent text suggestions offline in Google Chrome. No cloud calls, no latency, and no data leaving your machine; just fast, private, and efficient AI right in your browser.",
+      "room": "Mission 1",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-904881",
+      "year": 2025,
+      "title": "Diving into the Toplayer: Where Dialogs, Popovers, and Modals Live",
+      "speakers": [
+        "Tim Damen"
+      ],
+      "abstract": "The web platform is evolving, introducing powerful new primitives that change how we build interfaces. Among these innovations is the toplayer—an important yet often misunderstood rendering concept. This talk explores the toplayer rendering mechanism, learning how it enables UI patterns and examining its role in accessibility, performance, and developer experience.\n\nThe toplayer isn't just another technical specification—it represents a shift in how browsers handle elements that need to break out of the normal document flow. From dialog elements to the new popover API, custom tooltips to modal interfaces, the toplayer has quietly become essential for creating modern web experiences. By understanding how the toplayer works, developers can build more robust, accessible, and maintainable components while avoiding common pitfalls that lead to inconsistent user experiences.\n\nIn this session, we'll dive into the toplayer to understand how browsers handle stacking contexts, painting order, and focus management within the toplayer. Through practical examples and live coding demonstrations, attendees will gain both theoretical understanding and practical skills they can apply to their own projects.",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-1021309",
+      "year": 2025,
+      "title": "NIO Future Automotive Tech",
+      "speakers": [
+        "Tristan Hamelink"
+      ],
+      "abstract": "Get an insight into high-tech connected premium electric vehicles",
+      "room": "Expedition",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-1002748",
+      "year": 2025,
+      "title": "Pixels, Tokens, and Prompts: The Evolution of Design Systems",
+      "speakers": [
+        "Drazen Jankovic"
+      ],
+      "abstract": "Join me for a thought-provoking session that traces the journey from static style guides to intelligent, AI-powered design systems. Discover how today’s most forward-thinking teams are building living design languages using tokens, components, and prompts; and how AI is learning to speak them.\n\nWhether you’re a designer, developer, or just curious about the future of digital creativity, this talk will challenge how you think about interface design, automation, and the tools we use to shape tomorrow’s experiences.\n\nLet's get into:\n- The origin of styleguides\n- Going atomic with component shelves\n- Rise of the Design System\n- Enter Tokens\n- Components as a language\n- Prompts become input\n- Training your Design System",
+      "room": "Quest",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-994933",
+      "year": 2025,
+      "title": "It’s the End of the Front as We Know It (I Feel Fine)",
+      "speakers": [
+        "Nir Kaufman"
+      ],
+      "abstract": "For years, \"Front-End Developer\" was a well-defined title—HTML, CSS, JavaScript, and the frameworks that powered the web. But in 2025, does it still mean anything?\n\nWith AI assistants generating production-ready UIs, React Server Components shifting the boundaries between client and server, and full-stack tools blurring the lines, the role of the front-end developer is dissolving. The skills that once defined \"front-end\" are now just software engineering.\n\nIn this talk, we’ll explore why clinging to the old distinctions no longer makes sense—and why it's time to embrace a developer-first mindset. Forget front-end vs. back-end. The future belongs to those who master fundamentals, architecture, and engineering principles, not just UI frameworks.\n\nSo, is it the end of front-end development? Or just the beginning of something better?",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-976979",
+      "year": 2025,
+      "title": "The real cost of React re-renders in 2025",
+      "speakers": [
+        "Emīls Pļavenieks"
+      ],
+      "abstract": "Modern React makes it deceptively easy to write code that looks performant, but hides costly re-renders, hydration mismatches, and subtle CPU bottlenecks. As applications scale and ship to users on slower devices or flaky networks, these problems compound into real-world slowdowns.\nIn this talk, I'll dive deep into profiling React applications in 2025, leveraging the latest React DevTools, flamegraphs, and field metrics to uncover unexpected re-render patterns. I'll compare how React 18 cooperative scheduling and batching stacks up against React 19 new compiler-backed partial signals and smarter diffing, showing side-by-side examples of how seemingly harmless hooks can differ dramatically in cost. Also will touch React Forget and what it will bring.\nAside code examples it should also form a structure for a team how to properly test the performance of applications.",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-907452",
+      "year": 2025,
+      "title": "Fully server-side rendered web apps",
+      "speakers": [
+        "Lucien Immink"
+      ],
+      "abstract": "Single Page Applications (SPAs) have their advantages, but they also bring complexity and performance issues. By returning to server-rendered pages and utilizing modern view transitions, you can combine the simplicity and speed of traditional web pages with the smooth experience of a web app.\n\nSPAs can lead to longer load times, SEO challenges, and increased complexity in managing the application. Server-rendered pages offer a solution by reducing initial load times and improving overall performance. With the latest techniques for view transitions, you can also create a seamless and fluid user experience reminiscent of an SPA, including video that keeps on playing even if you navigate to a new page!\n\nIn this session, Lucien will discuss the benefits of server-rendered pages and show you how to implement modern view transitions to provide a web app-like experience. He will share practical examples and best practices to help you transition from SPAs to server-rendered pages.\nThank you client-side state management but it's time to move on!",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-967018",
+      "year": 2025,
+      "title": "OTel You It's Not Just for Backend!",
+      "speakers": [
+        "Carly Richmond"
+      ],
+      "abstract": "Observability is the ability to measure a system's current state. Backend engineers are more familiar with technologies such as OpenTelemetry that can be used to instrument applications and diagnose issues. Yet, in the frontend world, we're behind the curve.\n\nJoin me as I explore how to use OpenTelemetry instrument, monitor, and diagnose issues in our production front-end web applications. We'll discuss the current state of client instrumentation and walk through examples showing what logs, metrics and traces we can obtain from the OpenTelemetry JavaScript SDK.",
+      "room": "Expedition",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-958184",
+      "year": 2025,
+      "title": "The Future of Utility-First CSS: What Tailwind v4 Signals for Web Development",
+      "speakers": [
+        "Devlin Duldulao"
+      ],
+      "abstract": "Step back and examine the broader implications of Tailwind v4's innovations for the CSS ecosystem. This forward-looking talk explores how v4's architecture influences other frameworks, the role of native CSS evolution, and emerging patterns in component styling. We'll discuss the balance between utility-first approaches and component-driven development, and what these trends mean for the next generation of web applications.",
+      "room": "Quest",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-905075",
+      "year": 2025,
+      "title": "Engineering CSS - From type to function",
+      "speakers": [
+        "Brecht De Ruyte"
+      ],
+      "abstract": "Is CSS a programming language? And if so, how do you program in it? In this session you will learn how to create some solid engineered systems in CSS.\n\nWe will learn how to create 4 fully styled buttons with only 22 lines of code, or create a grid that is flexible and adaptable. Once we get into that engineer thinking, let's evolve further with some typing in CSS by using @property, highly upgrading your CSS debugging and animation skills. We will finally end with taking a glimpse to the future with newly adopted things by the CSSWG such as functions, mixins and conditionals.\n\nThis talk is highly technical, with a twist and a laugh, let's get into that engineer thinking with CSS.",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-915427",
+      "year": 2025,
+      "title": "Semantic HTML means it's semantic, right? Right?",
+      "speakers": [
+        "Julia Undeutsch"
+      ],
+      "abstract": "I wish I could tell all the developers out there who dutifully use semantic HTML because they are told that good developers who pay attention to code quality, a good developer experience and accessibility will automatically build accessible websites. I mean, in most cases this is the case (lucky us).\n\nThat's why I hate to break it to you: not all elements are automatically accessible just because they are semantic. Some HTML elements do not have browser or screen reader support by default. The same applies to some HTML attributes, which should be used with caution.\n\nLet's take a closer look at some of these elements, what they are, why they are not accessible, and what you can do to make them accessible.",
+      "room": "Mission 1",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-1015048",
+      "year": 2025,
+      "title": "Controlling your video animations with scroll-timeline and animation-timeline",
+      "speakers": [
+        "Steve Jonk"
+      ],
+      "abstract": "Step into a (very near) future where you can control animations with pure CSS and without the need for any JavaScript? In this talk, I’ll show you how to control your animations with the new CSS properties scroll-timeline and animation-timeline.",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-993309",
+      "year": 2025,
+      "title": "Debug Like a Pro: Unlocking Hidden Power in the Latest Chrome DevTools",
+      "speakers": [
+        "Talia Asghar"
+      ],
+      "abstract": "Think you know DevTools? Think again. This session explores powerful and often overlooked features in Chrome DevTools that can transform how you debug, automate, and optimize your code. From smarter workflows to AI-assisted insights, you’ll learn how to uncover issues faster and work more efficiently. Perfect for developers ready to level up with the latest Chrome has to offer.",
+      "room": "Expedition",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-1018611",
+      "year": 2025,
+      "title": "Leveling Up Together: What 300 Juniors Taught Me About Being Senior",
+      "speakers": [
+        "Swen Mulderij"
+      ],
+      "abstract": "Teaching over 300 people to code—through bootcamps, workshops, and one-on-one mentorship—has given me a front-row seat to the challenges new developers face and the strategies that truly help them succeed. In this talk, I’ll share the key lessons I’ve learned about being an effective mentor and teacher, from structuring lesson plans to offering guidance that sticks. Along the way, I’ll show real code examples and teaching patterns that worked (and some that didn’t), so you can walk away with practical tools to support junior developers and level up your own mentoring skills.",
+      "room": "Quest",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-1025624",
+      "year": 2025,
+      "title": "Integrating AI Into Apps: From Models to Adaptive UI/UX",
+      "speakers": [
+        "Jessy The"
+      ],
+      "abstract": "AI isn’t just about calling an API — it’s about creating apps that feel intelligent and personal.\n\nIn this hands-on workshop, we’ll build an AI-powered app step by step, moving from model integration to adaptive UI/UX that responds to users in meaningful ways.\n\nThe goal of this session\nYou’ll learn how to integrate AI into a Fullstack Next.js app, experiment with base models, fine-tuning, and retrieval (RAG), and explore how frontend developers can craft adaptive interfaces that make AI practical and engaging.\n\nWhat you’ll learn\n\n👉 How to connect an AI model to a modern Next.js app\n👉 The differences between base models, fine-tuning, and retrieval and when to use each way.\n👉 How to design adaptive UIs that make AI apps feel personal and useful\n👉 Patterns you can reuse to build your own AI-powered projects\n\nThis will be a fun, practical session for frontend developers who want to go beyond “Hello World” demos and leave with concrete tools to bring AI to life in their own work.",
+      "room": "Workshop area",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-968183",
+      "year": 2025,
+      "title": "Web dev uses Tauri, without knowing Rust",
+      "speakers": [
+        "Jeroen Akkerman"
+      ],
+      "abstract": "Tauri is a framework for building cross-platform apps using Rust and Javascript. It allows for faster apps, smaller sizes and easier framework integration compared to Electron.\nAs a web developer i have not learned Rust yet, so can I use Tauri then? Yes!\nTurns out you don't need any Rust knowledge to build fast, small and beautiful cross-platform apps using Tauri.",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-1017227",
+      "year": 2025,
+      "title": "Accessibility and AI: Building a More Inclusive Digital Future",
+      "speakers": [
+        "Elga de Klerk"
+      ],
+      "abstract": "As digital accessibility becomes a global priority, organizations must adapt to meet increasing ethical and legal standards. The use of artificial intelligence is driving innovation in accessibility, turning compliance into opportunity. Discover how AI-powered tools (like voice assistants and automated image descriptions) are creating more inclusive digital experiences for everyone.",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-954965",
+      "year": 2025,
+      "title": "You need a Frontend Platform team. Here's why.",
+      "speakers": [
+        "Jouke Visser"
+      ],
+      "abstract": "In Platform Engineering everybody speaks about infrastructure-, server-, data- and AI-platforms. But oftentimes, Frontend Engineers have to deal with most of their realm's complexity themselves.\nA Comprehensive Frontend Platform will turn a patchwork of different frontends into a well-oiled delivery machine of consistent and secure digital experiences.",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-926169",
+      "year": 2025,
+      "title": "INTL: The best browser API you're not using",
+      "speakers": [
+        "Kilian Valkhof"
+      ],
+      "abstract": "Browsers are shipping a massive API: INTL, which is chock-full of features most developer still do an NPM install for. Learn about all the wonderful built in ways to deal with date formatting, lists, currencies, items and sentences in any language you can throw at it, without shipping literal megabytes of packages to your user.\n\nThe INTL API will save you time, effort and frustration, and it's built into the browsers your visitors use. Join this session and stop shipping unneeded JavaScript!",
+      "room": "Mission 1",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-1021321",
+      "year": 2025,
+      "title": "From the crypt to the code: Web security explored through horror movies",
+      "speakers": [
+        "Ramona Schwering"
+      ],
+      "abstract": "A cryptic videotape haunting its viewers, a shape-shifting entity haunting a research station, or an astronaut unknowingly carrying an alien onto a spaceship. Do these scenarios sound familiar? These horror movie plots share similarities with scenarios in web security you have already encountered.\nJoin me on a chilling journey through web security as we explore the most common vulnerabilities through the lens of horror movies. From the sinister injection flaws reminiscent of \"Alien\" to the terrifying specter of broken authentication akin to \"The Invisible Man,\" join me and learn how to conquer the darkness invited by your web applications.",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-949996",
+      "year": 2025,
+      "title": "The tech behind Buienradar: How technology keeps you ahead of the weather",
+      "speakers": [
+        "Neel Bhatt"
+      ],
+      "abstract": "Curious about how Netherlands biggest weather platform manages to predict the weather with such accuracy while serving millions of users every day? Join us for an insightful dive into the technology powering Buienradar’s meteorological marvel.\n\nIn this down-to-earth conference talk, we’ll take a closer look at the nuts and bolts of Buienradar’s operations. Discover how Buienradar’s scalable infrastructure and clever algorithms work together to process vast amounts of data, providing users with reliable weather forecasts at their fingertips.\n\nWe’ll explore the challenges of managing such a high volume of users and data, discussing practical solutions and lessons learned along the way. From data handling techniques to performance optimization, we’ll cover it all in a relatable and accessible manner.\n\nWe will cover our journey to kubernetes, how our platform engineering works, how our architecture looks like, how we maximize our observability using grafana and much more.\n\nWhether you’re a tech enthusiast, a weather aficionado, or simply curious about how your favorite weather app works, this talk is for you. Join us as we peel back the curtain on Buienradar’s technology, demystifying the complex world of weather forecasting in a way that’s easy to understand and appreciate.",
+      "room": "Expedition",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-978706",
+      "year": 2025,
+      "title": "Porting React code to vanilla JS, for fun!",
+      "speakers": [
+        "Joeri Sebrechts"
+      ],
+      "abstract": "The chasm between the capability of vanilla JS and React is often seen as insurmountable. What happens when we try to port headliner React demos to vanilla web code? What are the equivalents of advanced React features like context or suspense? Let's walk through some examples of ported code, see what works in vanilla JS, and find out where React still has the edge.",
+      "room": "Quest",
+      "videoUrl": null
+    }
+  ]
+}

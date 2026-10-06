@@ -1,0 +1,8 @@
+# pnpm 12 settings. Every version in package.json is an exact pin reviewed on
+# 26 Sep 2026; the lockfile is the policy. The default minimumReleaseAge would
+# reject ai@7.0.116 and @ai-sdk/openai-compatible@3.0.57 (published < 24 h
+# before the pins were chosen) and break `pnpm install --frozen-lockfile`.
+minimumReleaseAge: 0
+allowBuilds:
+  esbuild: true
+  protobufjs: true

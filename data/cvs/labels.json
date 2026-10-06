@@ -1,0 +1,30 @@
+{
+  "note": "Provisional labels written by the data engineer on 26 Sep 2026 from the abstracts; the trainer reviews and confirms them before 7 Oct (outline task 8). picks use ids from data/program-2026.json; fixturePicks use ids from data/fixtures/program-2026.json.",
+  "labels": [
+    {
+      "persona": "01-junior-angular-gov",
+      "picks": { "14:15": "fm26-1250255", "15:30": "fm26-1141925", "16:30": "fm26-1307365" },
+      "fixturePicks": { "14:15": "fm26-fx-04", "15:30": "fm26-fx-08", "16:30": "fm26-fx-13" }
+    },
+    {
+      "persona": "02-senior-react-architect",
+      "picks": { "14:15": "fm26-1227996", "15:30": "fm26-1141979", "16:30": "fm26-1233186" },
+      "fixturePicks": { "14:15": "fm26-fx-01", "15:30": "fm26-fx-10", "16:30": "fm26-fx-15" }
+    },
+    {
+      "persona": "03-a11y-design-systems",
+      "picks": { "14:15": "fm26-1250255", "15:30": "fm26-1196635", "16:30": "fm26-1307365" },
+      "fixturePicks": { "14:15": "fm26-fx-04", "15:30": "fm26-fx-09", "16:30": "fm26-fx-13" }
+    },
+    {
+      "persona": "04-node-backend-to-frontend",
+      "picks": { "14:15": "fm26-1150358", "15:30": "fm26-1141925", "16:30": "fm26-1169454" },
+      "fixturePicks": { "14:15": "fm26-fx-03", "15:30": "fm26-fx-08", "16:30": "fm26-fx-14" }
+    },
+    {
+      "persona": "05-engineering-manager",
+      "picks": { "14:15": "fm26-1249439", "15:30": "fm26-1232518", "16:30": "fm26-1233746" },
+      "fixturePicks": { "14:15": "fm26-fx-02", "15:30": "fm26-fx-11", "16:30": "fm26-fx-16" }
+    }
+  ]
+}

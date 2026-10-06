@@ -1,0 +1,80 @@
+{
+  "snapshotAt": "2026-09-26T11:01:58.945Z",
+  "program": {
+    "count": 16,
+    "words": 2029,
+    "medianWords": 123,
+    "sessionsInEmbed": 29,
+    "excluded": 13,
+    "perSlot": {
+      "14:15": 6,
+      "15:30": 6,
+      "16:30": 4
+    },
+    "excludedSessions": [
+      {
+        "id": "fm26-1319862",
+        "startTime": "09:40"
+      },
+      {
+        "id": "fm26-1227997",
+        "startTime": "10:05"
+      },
+      {
+        "id": "fm26-1140489",
+        "startTime": "11:00"
+      },
+      {
+        "id": "fm26-1212827",
+        "startTime": "11:00"
+      },
+      {
+        "id": "fm26-1250082",
+        "startTime": "11:00"
+      },
+      {
+        "id": "fm26-1151316",
+        "startTime": "11:00"
+      },
+      {
+        "id": "fm26-1182618",
+        "startTime": "11:00"
+      },
+      {
+        "id": "fm26-1187984",
+        "startTime": "11:00"
+      },
+      {
+        "id": "fm26-1216262",
+        "startTime": "12:00"
+      },
+      {
+        "id": "fm26-1229595",
+        "startTime": "12:00"
+      },
+      {
+        "id": "fm26-1228810",
+        "startTime": "12:00"
+      },
+      {
+        "id": "fm26-1153487",
+        "startTime": "12:00"
+      },
+      {
+        "id": "fm26-1314085",
+        "startTime": "12:00"
+      }
+    ],
+    "allSessions": {
+      "count": 29,
+      "words": 4087,
+      "medianWords": 131
+    }
+  },
+  "archive": {
+    "year": 2025,
+    "count": 30,
+    "words": 3149,
+    "medianWords": 100
+  }
+}

@@ -1,0 +1,173 @@
+# Talk-picker workshop stack. One command:
+#   VPS:   docker compose up -d --build          (COMPOSE_PROFILES=vps in .env)
+#   Local: COMPOSE_PROFILES=local docker compose up -d --build
+# Services: postgres, mlflow, litellm, backend, caddy (TLS) or caddy-local (no TLS).
+name: talk-picker
+
+x-postgres-url: &postgres-user workshop
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: *postgres-user
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in infra/.env}
+      POSTGRES_DB: postgres
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U workshop -d postgres']
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+  mlflow:
+    build: ./mlflow
+    # MLflow 3.16 rejects any Host header outside --allowed-hosts with 403 (DNS-rebinding guard).
+    # The backend calls it as mlflow:5000 and Caddy forwards ws.<host> / mlflow.<host>; observed
+    # 26 Sep in the rehearsal: without this line every assessment and prompt read got 403.
+    # PUBLIC_HOST itself is the gateway host (OTLP /otel/v1/traces arrives with it): without it every
+    # trace got 403 on the first real server (6 Oct, 34-13-188-3.sslip.io).
+    restart: unless-stopped
+    command: >
+      mlflow server
+      --backend-store-uri postgresql://workshop:${POSTGRES_PASSWORD}@postgres:5432/mlflow
+      --artifacts-destination /mlflow/artifacts
+      --serve-artifacts
+      --host 0.0.0.0 --port 5000 --workers 2
+      --allowed-hosts mlflow:5000,mlflow,localhost,localhost:*,127.0.0.1:*,${PUBLIC_HOST:-localhost},ws.${PUBLIC_HOST:-localhost},mlflow.${PUBLIC_HOST:-localhost}
+      --cors-allowed-origins https://mlflow.${PUBLIC_HOST:-localhost},http://localhost:8081
+    volumes:
+      - mlflow-artifacts:/mlflow/artifacts
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'python',
+          '-c',
+          "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:5000/health', timeout=3).status == 200 else 1)",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+      start_period: 30s
+
+  litellm:
+    image: docker.io/litellm/litellm:v1.102.1
+    restart: unless-stopped
+    command: ['--config', '/app/config.yaml', '--port', '4000']
+    environment:
+      DATABASE_URL: postgresql://workshop:${POSTGRES_PASSWORD}@postgres:5432/litellm
+      LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY:?set LITELLM_MASTER_KEY in infra/.env}
+      LITELLM_SALT_KEY: ${LITELLM_SALT_KEY:?set LITELLM_SALT_KEY in infra/.env}
+      VERTEX_PROJECT: ${VERTEX_PROJECT:?set VERTEX_PROJECT in infra/.env}
+      VERTEX_LOCATION: ${VERTEX_LOCATION:?set VERTEX_LOCATION in infra/.env}
+      VERTEX_CREDENTIALS: /run/secrets/vertex-sa.json
+      TASK_MODEL_UPSTREAM: ${TASK_MODEL_UPSTREAM}
+      EMBED_MODEL_UPSTREAM: ${EMBED_MODEL_UPSTREAM}
+      REFLECT_MODEL_UPSTREAM: ${REFLECT_MODEL_UPSTREAM}
+      STORE_MODEL_IN_DB: 'False'
+    volumes:
+      - ./litellm/config.yaml:/app/config.yaml:ro
+      # Service-account key (roles/aiplatform.user only); never committed, see infra/.env.example
+      - ./secrets/vertex-sa.json:/run/secrets/vertex-sa.json:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      # The image ships neither curl nor wget (checked 26 Sep 2026 on v1.102.1); python3 is at /app/.venv/bin.
+      test:
+        [
+          'CMD',
+          'python3',
+          '-c',
+          "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:4000/health/liveliness', timeout=3).status == 200 else 1)",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+      start_period: 30s
+
+  backend:
+    build:
+      context: ..
+      dockerfile: infra/backend/Dockerfile
+    restart: unless-stopped
+    environment:
+      PORT: '3000'
+      DATA_DIR: /data
+      PROGRAM_FILE: /app/data/program-2026.json
+      PROGRAM_FIXTURE: /app/data/fixtures/program-2026.json
+      MLFLOW_URL: http://mlflow:5000
+      MLFLOW_EXPERIMENT_ID: ${MLFLOW_EXPERIMENT_ID}
+      LITELLM_URL: http://litellm:4000
+      LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY}
+      WORKSHOP_ADMIN_TOKEN: ${WORKSHOP_ADMIN_TOKEN:?set WORKSHOP_ADMIN_TOKEN in infra/.env}
+      ID_VARIANT: ${ID_VARIANT:-slip}
+    volumes:
+      - backend-data:/data
+    depends_on:
+      mlflow:
+        condition: service_healthy
+      litellm:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'node',
+          '-e',
+          "fetch('http://localhost:3000/api/health').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  caddy:
+    profiles: [vps]
+    image: caddy:2.11.4-alpine
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '443:443'
+    environment:
+      # Empty defaults so the local profile validates; the vps profile needs all four set in infra/.env.
+      PUBLIC_HOST: ${PUBLIC_HOST:-}
+      ACME_EMAIL: ${ACME_EMAIL:-}
+      MLFLOW_UI_USER: ${MLFLOW_UI_USER:-trainer}
+      MLFLOW_UI_PASSWORD_HASH: ${MLFLOW_UI_PASSWORD_HASH:-}
+      MLFLOW_EXPERIMENT_ID: ${MLFLOW_EXPERIMENT_ID}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  caddy-local:
+    profiles: [local]
+    image: caddy:2.11.4-alpine
+    restart: unless-stopped
+    ports:
+      - '8080:8080'
+      - '8081:8081'
+    environment:
+      MLFLOW_EXPERIMENT_ID: ${MLFLOW_EXPERIMENT_ID}
+    volumes:
+      - ./Caddyfile.local:/etc/caddy/Caddyfile:ro
+    depends_on:
+      backend:
+        condition: service_healthy
+
+volumes:
+  pg-data:
+  mlflow-artifacts:
+  backend-data:
+  caddy-data:
+  caddy-config:

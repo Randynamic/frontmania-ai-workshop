@@ -1,0 +1,12 @@
+node_modules
+.git
+coverage
+optimize
+.env
+.env.local
+infra/.env
+infra/backend/data
+infra/scripts/out
+.talk-picker
+.devcontainer
+.github

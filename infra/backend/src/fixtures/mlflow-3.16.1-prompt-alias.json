@@ -1,0 +1,52 @@
+{
+  "byAlias": {
+    "model_version": {
+      "name": "ranker",
+      "version": "1",
+      "creation_timestamp": 1790421150203,
+      "last_updated_timestamp": 1790421150203,
+      "current_stage": "None",
+      "description": "",
+      "source": "dummy-source",
+      "run_id": "",
+      "status": "READY",
+      "tags": [
+        {
+          "key": "mlflow.prompt.is_prompt",
+          "value": "true"
+        },
+        {
+          "key": "mlflow.prompt.text",
+          "value": "Rank {{talks}} for {{profile}}"
+        }
+      ],
+      "run_link": "",
+      "aliases": ["production"]
+    }
+  },
+  "version": {
+    "model_version": {
+      "name": "ranker",
+      "version": "1",
+      "creation_timestamp": 1790421150203,
+      "last_updated_timestamp": 1790421150203,
+      "current_stage": "None",
+      "description": "",
+      "source": "dummy-source",
+      "run_id": "",
+      "status": "READY",
+      "tags": [
+        {
+          "key": "mlflow.prompt.is_prompt",
+          "value": "true"
+        },
+        {
+          "key": "mlflow.prompt.text",
+          "value": "Rank {{talks}} for {{profile}}"
+        }
+      ],
+      "run_link": "",
+      "aliases": ["production"]
+    }
+  }
+}

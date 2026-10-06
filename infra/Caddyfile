@@ -1,0 +1,51 @@
+# VPS gateway. Env placeholders come from infra/.env through docker compose.
+#   https://<PUBLIC_HOST>/proxy/*  -> litellm (prefix stripped)  participant key = LiteLLM virtual key
+#   https://<PUBLIC_HOST>/otel/*   -> only POST /otel/v1/traces and GET /otel/health: backend /api/auth
+#                                    check, then mlflow (prefix stripped); any other /otel path is 404
+#   https://<PUBLIC_HOST>/*        -> backend (pick page, api)
+#   https://mlflow.<PUBLIC_HOST>   -> mlflow UI behind basic auth (trainers only)
+{
+	email {$ACME_EMAIL}
+	admin off
+}
+
+{$PUBLIC_HOST} {
+	encode gzip
+
+	handle_path /proxy/* {
+		reverse_proxy litellm:4000
+	}
+
+	handle /otel/* {
+		# Participants may only send spans (POST /otel/v1/traces) and read GET /otel/health.
+		# Every other MLflow REST path (trace search, artifacts, experiment delete, prompt
+		# aliases) answers 404, so a participant key never reaches the trainer-only API.
+		@otelAllowed expression `({method} == 'POST' && {path} == '/otel/v1/traces') || ({method} == 'GET' && {path} == '/otel/health')`
+		handle @otelAllowed {
+			# The backend answers 200 when the bearer key exists and is not revoked.
+			forward_auth backend:3000 {
+				uri /api/auth
+			}
+			uri strip_prefix /otel
+			reverse_proxy mlflow:5000 {
+				# MLflow needs no auth inside the network; never forward the participant key.
+				header_up -Authorization
+				header_up x-mlflow-experiment-id {$MLFLOW_EXPERIMENT_ID}
+			}
+		}
+		handle {
+			respond 404
+		}
+	}
+
+	handle {
+		reverse_proxy backend:3000
+	}
+}
+
+mlflow.{$PUBLIC_HOST} {
+	basic_auth {
+		{$MLFLOW_UI_USER} {$MLFLOW_UI_PASSWORD_HASH}
+	}
+	reverse_proxy mlflow:5000
+}

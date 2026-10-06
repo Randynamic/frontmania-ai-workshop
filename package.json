@@ -1,0 +1,60 @@
+{
+  "name": "talk-picker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Frontmania 2026 workshop: a self-improving talk picker built with Mastra, MLflow and GEPA",
+  "type": "module",
+  "packageManager": "pnpm@12.6.0",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --check .",
+    "format:write": "prettier --write .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "switch": "node --import tsx scripts/switch.ts",
+    "doctor": "node --env-file-if-exists=.env --import tsx --import ./scripts/lib/preload-env-local.ts scripts/doctor.ts",
+    "profile": "node --env-file-if-exists=.env --import tsx --import ./scripts/lib/preload-env-local.ts scripts/profile.ts",
+    "plan": "node --env-file-if-exists=.env --import tsx --import ./scripts/lib/preload-env-local.ts scripts/plan.ts",
+    "compare": "node --env-file-if-exists=.env --import tsx --import ./scripts/lib/preload-env-local.ts scripts/compare.ts",
+    "rank-once": "node --env-file-if-exists=.env --import tsx --import ./scripts/lib/preload-env-local.ts scripts/rank-once.ts",
+    "ask": "node --env-file-if-exists=.env --import tsx --import ./scripts/lib/preload-env-local.ts scripts/ask.ts",
+    "check:01": "node --env-file-if-exists=.env --import tsx --import ./scripts/lib/preload-env-local.ts scripts/check/01.ts",
+    "check:02": "node --env-file-if-exists=.env --import tsx --import ./scripts/lib/preload-env-local.ts scripts/check/02.ts",
+    "check:03": "node --env-file-if-exists=.env --import tsx --import ./scripts/lib/preload-env-local.ts scripts/check/03.ts",
+    "backend": "node --env-file-if-exists=infra/.env --import tsx infra/backend/src/server.ts",
+    "keys:create": "node --env-file-if-exists=infra/.env --import tsx infra/scripts/keys-create.ts",
+    "keys:revoke": "node --env-file-if-exists=infra/.env --import tsx infra/scripts/keys-revoke.ts",
+    "data:delete": "node --env-file-if-exists=infra/.env --import tsx infra/scripts/delete-data.ts",
+    "smoke": "node --env-file-if-exists=.env --import tsx infra/scripts/smoke.ts",
+    "ingest": "node --env-file-if-exists=.env --import tsx --import ./scripts/lib/preload-env-local.ts scripts/ingest.ts",
+    "snapshot": "node --import tsx scripts/sessionize/snapshot.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "3.0.57",
+    "@hono/node-server": "2.1.1",
+    "@libsql/client": "0.18.0",
+    "@mastra/core": "1.71.0",
+    "@mastra/libsql": "1.23.3",
+    "@mastra/observability": "1.18.1",
+    "@mastra/otel-exporter": "1.4.2",
+    "@opentelemetry/exporter-trace-otlp-proto": "0.218.0",
+    "ai": "7.0.116",
+    "hono": "4.13.9",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "22.20.4",
+    "@vitest/coverage-v8": "4.1.11",
+    "eslint": "10.11.0",
+    "prettier": "3.9.9",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.1",
+    "vitest": "4.1.11"
+  }
+}

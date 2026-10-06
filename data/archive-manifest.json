@@ -1,0 +1,12 @@
+{
+  "index": "archive",
+  "dimension": 768,
+  "embedding": "talk-picker-embed",
+  "mode": "live",
+  "fixture": false,
+  "rows": 30,
+  "years": [
+    2025
+  ],
+  "builtAt": "2026-10-06T13:33:30.007Z"
+}

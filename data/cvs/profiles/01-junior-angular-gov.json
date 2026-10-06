@@ -1,0 +1,22 @@
+{
+  "role": "Front-end developer (Angular) at a municipal organisation",
+  "seniority": "junior",
+  "stack": [
+    "TypeScript",
+    "Angular",
+    "RxJS",
+    "SCSS",
+    "Cypress",
+    "Jest",
+    "GitLab CI",
+    "NL Design System"
+  ],
+  "interests": [
+    "accessibility in real applications",
+    "programming principles and clean code",
+    "testing strategies",
+    "performance on old devices",
+    "AI coding assistants for juniors"
+  ],
+  "avoid": ["marketing keynotes", "crypto or Web3", "React-only talks"]
+}

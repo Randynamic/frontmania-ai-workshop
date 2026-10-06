@@ -1,0 +1,30 @@
+{
+  "role": "Principal front-end architect at a logistics scale-up",
+  "seniority": "lead",
+  "stack": [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Zod",
+    "tRPC",
+    "Tailwind",
+    "Playwright",
+    "OpenTelemetry",
+    "Turborepo"
+  ],
+  "interests": [
+    "human-in-the-loop agent UX",
+    "observability and tracing for LLM features",
+    "evaluation and cost per request",
+    "authentication architecture for multi-team front-ends",
+    "design-system governance",
+    "performance budgets"
+  ],
+  "avoid": [
+    "Angular deep dives",
+    "vendor keynotes",
+    "AI-replaces-developers talks",
+    "Python notebooks"
+  ]
+}

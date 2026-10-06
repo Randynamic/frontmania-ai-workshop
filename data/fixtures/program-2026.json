@@ -1,0 +1,185 @@
+{
+  "event": "Frontmania 2026 (fixture)",
+  "source": "https://sessionize.com/api/v2/gx2dpiu7/view/Sessions?under=true",
+  "snapshotAt": "2026-09-26T10:00:00.000Z",
+  "fixture": true,
+  "slots": ["14:15", "15:30", "16:30"],
+  "talks": [
+    {
+      "id": "fm26-fx-01",
+      "title": "Ask Before You Act: Agents That Hand the Wheel Back",
+      "speakers": ["Ilse Brandsma"],
+      "slot": "14:15",
+      "room": "Progress",
+      "durationMin": 45,
+      "abstract": "Autonomous agents are easy to demo and hard to trust. This session shows how to design agents that pause at the right moment: clarifying questions instead of guesses, action cards the user can edit before anything runs, and workflows that can be resumed after a rejection. We build a small planning assistant in TypeScript, wire it to a streaming UI protocol, and look at what the trace tells you about where the human actually stepped in. You leave with a checklist for deciding which decisions an agent may take alone.",
+      "startTime": "14:15",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-02",
+      "title": "The Job Is Not the Syntax: What Front-end Engineers Do in 2027",
+      "speakers": ["Ruben Achterberg"],
+      "slot": "14:15",
+      "room": "Mission 1",
+      "durationMin": 20,
+      "abstract": "Generating a component is now the cheap part. Deciding whether it belongs, keeping the architecture coherent and explaining the result to the rest of the organisation is the expensive part. This short talk maps the shift from builder to steward: which skills lose value, which gain it, and how to talk about that with your team without hype or panic. No tooling, only the mindset and three concrete habits.",
+      "startTime": "14:15",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-03",
+      "title": "Instant Pages: Prefetching, Speculation and the Illusion of Speed",
+      "speakers": ["Nadia Kortenhoeven"],
+      "slot": "14:15",
+      "room": "Mission 2",
+      "durationMin": 45,
+      "abstract": "Users forgive a lot, but not a blank screen. This talk walks through the platform features that make navigation feel instant: speculation rules for prerendering, view transitions that hide the seam, and service-worker caching that keeps working offline. Every technique comes with a measurement, a failure mode and a budget. We end with a decision table you can apply to your own site tomorrow, framework or not.",
+      "startTime": "14:15",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-04",
+      "title": "Accessible Components, Inaccessible App: Closing the Gap",
+      "speakers": ["Femke Lageweg"],
+      "slot": "14:15",
+      "room": "Expedition",
+      "durationMin": 45,
+      "abstract": "Your design system passes every audit and your application still fails real users. The problems live between the components: focus that disappears after a route change, status messages nobody hears, dialogs stacked on dialogs, forms that validate too early. Using recordings of assistive-technology sessions, we look at ten page-level failures, why component tests never catch them, and what to add to your acceptance criteria and end-to-end tests so they do.",
+      "startTime": "14:15",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-05",
+      "title": "Rebuilding Trust in a Design System Nobody Wanted to Use",
+      "speakers": ["Tobias Wennekes"],
+      "slot": "14:15",
+      "room": "Quest",
+      "durationMin": 45,
+      "abstract": "A design system that ships breaking changes every month, documents nothing and builds in isolation teaches every team the same lesson: it is faster to do it yourself. This case study follows the renewal of the shared component library of a large public institution: a contribution model, versioning people can plan around, documentation as a product, and a community of maintainers instead of a gatekeeping team. Numbers on adoption before and after, and the mistakes we would not repeat.",
+      "startTime": "14:15",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-06",
+      "title": "One Repository, Many Agents: Worktrees Without the Mess",
+      "speakers": ["Sven Oldenhuis"],
+      "slot": "14:15",
+      "room": "Mission 1",
+      "durationMin": 20,
+      "abstract": "Two coding agents and a human sharing one checkout is a recipe for lost work. Git worktrees give every task its own directory on its own branch with one command. In twenty minutes: the setup, the scripts that keep worktrees tidy, how to run tests per worktree in parallel, and the two situations where worktrees make things worse.",
+      "startTime": "14:40",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-07",
+      "title": "Signals on Wheels: Driving Hardware from an Angular App",
+      "speakers": ["Priya Raghunathan"],
+      "slot": "15:30",
+      "room": "Progress",
+      "durationMin": 45,
+      "abstract": "What happens when an Angular application controls a small robot over WebSockets? Signals turn sensor streams into reactive state, effects drive the motors, and the browser becomes a real-time control panel. Live demos throughout, and practical patterns for back-pressure, reconnection and testing when the other end is a physical device.",
+      "startTime": "15:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-08",
+      "title": "Rules of Thumb: Programming Principles for Front-end Code",
+      "speakers": ["Marloes Kuiper"],
+      "slot": "15:30",
+      "room": "Mission 1",
+      "durationMin": 45,
+      "abstract": "Front-end work became application engineering, but many of us never learned the principles that make code easy to change: the rule of three, single responsibility, dependency direction, naming as design, and knowing when a pattern is worth its weight. This talk goes through each with front-end examples, shows the smell it prevents, and explains when to ignore it. Framework-agnostic and useful whether you are in your first year or your fifteenth.",
+      "startTime": "15:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-09",
+      "title": "CSS Is the State Machine Now",
+      "speakers": ["Jonas Vandeputte"],
+      "slot": "15:30",
+      "room": "Mission 2",
+      "durationMin": 45,
+      "abstract": "Interaction state, environment, DOM shape, container size, scroll position: CSS can observe all of them today and react without a line of JavaScript. This session builds a small interface entirely from pseudo-classes, :has(), container and style queries, and scroll-driven animations, then discusses where the approach breaks down and what it means for accessibility and reduced-motion preferences.",
+      "startTime": "15:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-10",
+      "title": "Login Once: An OpenID Connect BFF for Micro Front-ends",
+      "speakers": ["Karel Diepenbrock"],
+      "slot": "15:30",
+      "room": "Expedition",
+      "durationMin": 45,
+      "abstract": "Every micro front-end rolling its own OAuth flow means tokens in the browser and inconsistent sessions across apps. The alternative is a backend-for-frontend that owns the OpenID Connect flow and hands the browser a cookie. We show a production implementation packaged as a reusable building block, walk through the threat model, and cover the operational details: token refresh, logout across apps, and running it locally without a real identity provider.",
+      "startTime": "15:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-11",
+      "title": "Generated Fast, Shipped Slow: Undoing the Weight AI Adds",
+      "speakers": ["Esther Nooteboom"],
+      "slot": "15:30",
+      "room": "Quest",
+      "durationMin": 45,
+      "abstract": "Since AI assistants went mainstream, page weight has grown faster than ever: generated code looks right, runs slow, and pulls in dependencies nobody asked for. This talk quantifies the trend from field data, shows the typical patterns, and then turns the same tools around: agents that audit bundles, propose deletions and verify the result against performance budgets. Practical setups for CI included.",
+      "startTime": "15:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-12",
+      "title": "(Workshop) Spec First: Building a Feature With an AI Pair From Contract to Deploy",
+      "speakers": ["Amira Zeghari"],
+      "slot": "15:30",
+      "room": "Workshop area",
+      "durationMin": 105,
+      "abstract": "A hands-on session on spec-driven development: write the behaviour contract first, let the assistant generate implementation and tests against it, and validate everything before it ships. You bring a laptop; we bring a small web application with a missing feature. By the end you have a workflow you can repeat on Monday and an opinion on where the spec should stop.",
+      "startTime": "15:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-13",
+      "title": "Heard but Not Seen: Making Dynamic Interfaces Work for Screen Readers",
+      "speakers": ["Tobias Wennekes"],
+      "slot": "16:30",
+      "room": "Progress",
+      "durationMin": 45,
+      "abstract": "Toasts, banners, inline validation and live counters appear and vanish in seconds. For screen-reader users they are either noise or silence. Through recorded sessions and a few unfair demos, this talk shows how dynamic content is experienced without sight, then builds up the toolkit: live regions with the right politeness, focus management that respects the user, and status patterns that survive a redesign.",
+      "startTime": "16:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-14",
+      "title": "No Framework Required: Reactive Apps With Custom Elements",
+      "speakers": ["Lars Bijlsma"],
+      "slot": "16:30",
+      "room": "Mission 1",
+      "durationMin": 45,
+      "abstract": "Custom elements, observables and a few modern browser APIs are enough to build a real application: lightweight, accessible, fast to load and free of dependency churn. This talk builds one on stage, compares the result with a framework equivalent on size and time to interactive, and is honest about what you give up. Aimed at people who know the platform less well than they know their framework.",
+      "startTime": "16:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-15",
+      "title": "What Your Agent Forgot: Context Engineering for Teams",
+      "speakers": ["Hanna Verlinde"],
+      "slot": "16:30",
+      "room": "Mission 2",
+      "durationMin": 45,
+      "abstract": "Every new AI session starts blind: no memory of last week's decision, no idea why the codebase looks the way it does. Context engineering is the practice of deciding what an agent knows, when, and how that knowledge survives sessions and people. We cover repository conventions, decision records the agent can read, retrieval over your own history, and the failure modes of giving an agent too much.",
+      "startTime": "16:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-fx-16",
+      "title": "Release Pilots: Letting Agents Verify Environments So People Can Ship Smaller",
+      "speakers": ["Selma Haddadi"],
+      "slot": "16:30",
+      "room": "Quest",
+      "durationMin": 45,
+      "abstract": "Release engineers spend a large share of their week checking environment health by hand, which pushes teams towards big, risky batches. This session lays out a roadmap for agents that verify, diagnose and gate releases: what to automate first, how to keep a human accountable, and which metrics show whether smaller batches actually arrived. Includes the organisational changes that were harder than the tooling.",
+      "startTime": "16:30",
+      "year": 2026
+    }
+  ]
+}

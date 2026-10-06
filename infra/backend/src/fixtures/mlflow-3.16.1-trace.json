@@ -1,0 +1,844 @@
+{
+  "trace": {
+    "trace_info": {
+      "trace_id": "tr-446ae47eb395812155265a4e51014e75",
+      "trace_location": {
+        "type": "MLFLOW_EXPERIMENT",
+        "mlflow_experiment": {
+          "experiment_id": "1"
+        }
+      },
+      "request_time": "2026-09-26T11:12:20.054Z",
+      "execution_duration": "0.056s",
+      "state": "OK",
+      "trace_metadata": {
+        "mlflow.trace.tokenUsage": "{\"input_tokens\": 321, \"output_tokens\": 20, \"total_tokens\": 341, \"cache_read_input_tokens\": 0, \"cache_creation_input_tokens\": 0}"
+      },
+      "assessments": [
+        {
+          "assessment_id": "a-b4ef6a8baecb49e68eb2a4591b87cc0b",
+          "assessment_name": "slot_pick",
+          "trace_id": "tr-446ae47eb395812155265a4e51014e75",
+          "source": {
+            "source_type": "HUMAN",
+            "source_id": "otter-42"
+          },
+          "create_time": "2026-09-26T11:12:30.149Z",
+          "last_update_time": "2026-09-26T11:12:30.149Z",
+          "feedback": {
+            "value": "up"
+          },
+          "rationale": "good",
+          "metadata": {
+            "slot": "14:15"
+          },
+          "valid": true
+        },
+        {
+          "assessment_id": "a-6757e4b3a9cb4b2abb54d141b03ae5fd",
+          "assessment_name": "expected_pick",
+          "trace_id": "tr-446ae47eb395812155265a4e51014e75",
+          "source": {
+            "source_type": "HUMAN",
+            "source_id": "otter-42"
+          },
+          "create_time": "2026-09-26T11:12:30.164Z",
+          "last_update_time": "2026-09-26T11:12:30.164Z",
+          "expectation": {
+            "value": "fm26-1"
+          },
+          "metadata": {
+            "slot": "14:15"
+          },
+          "valid": true
+        }
+      ],
+      "tags": {
+        "service.name": "talk-picker",
+        "service.version": "1.71.0",
+        "mlflow.trace.spansLocation": "TRACKING_STORE",
+        "mlflow.artifactLocation": "/tmp/artifacts/1/traces/tr-446ae47eb395812155265a4e51014e75/artifacts"
+      }
+    },
+    "spans": [
+      {
+        "trace_id": "RGrkfrOVgSFVJlpOUQFOdQ==",
+        "span_id": "P4NXEoPetJY=",
+        "name": "invoke_agent profile",
+        "start_time_unix_nano": 1790421140054000000,
+        "end_time_unix_nano": 1790421140110000000,
+        "attributes": [
+          {
+            "key": "gen_ai.operation.name",
+            "value": {
+              "string_value": "invoke_agent"
+            }
+          },
+          {
+            "key": "mastra.span.type",
+            "value": {
+              "string_value": "agent_run"
+            }
+          },
+          {
+            "key": "mastra.agent_run.input",
+            "value": {
+              "string_value": "[cv:sha256:dacb693fe21b]\n"
+            }
+          },
+          {
+            "key": "mastra.agent_run.output",
+            "value": {
+              "kvlist_value": {
+                "values": [
+                  {
+                    "key": "text",
+                    "value": {
+                      "string_value": "{\"role\":\"Senior Front-end Architect\",\"seniority\":\"senior\"}"
+                    }
+                  },
+                  {
+                    "key": "files",
+                    "value": {
+                      "array_value": {}
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "key": "gen_ai.agent.id",
+            "value": {
+              "string_value": "profile-agent"
+            }
+          },
+          {
+            "key": "gen_ai.agent.name",
+            "value": {
+              "string_value": "profile"
+            }
+          },
+          {
+            "key": "gen_ai.system_instructions",
+            "value": {
+              "string_value": "Extract a profile. Never output names."
+            }
+          },
+          {
+            "key": "mastra.metadata.runId",
+            "value": {
+              "string_value": "4a6d02ad-491c-[phone]-80f895346d48"
+            }
+          },
+          {
+            "key": "mastra.metadata.participantId",
+            "value": {
+              "string_value": "otter-42"
+            }
+          },
+          {
+            "key": "mastra.metadata.kind",
+            "value": {
+              "string_value": "profile"
+            }
+          },
+          {
+            "key": "mlflow.traceRequestId",
+            "value": {
+              "string_value": "tr-446ae47eb395812155265a4e51014e75"
+            }
+          },
+          {
+            "key": "mlflow.spanType",
+            "value": {
+              "string_value": "AGENT"
+            }
+          }
+        ],
+        "status": {
+          "code": "STATUS_CODE_OK"
+        }
+      },
+      {
+        "trace_id": "RGrkfrOVgSFVJlpOUQFOdQ==",
+        "span_id": "WJGC9Stoevc=",
+        "parent_span_id": "P4NXEoPetJY=",
+        "name": "model_generation mock-task",
+        "start_time_unix_nano": 1790421140063000000,
+        "end_time_unix_nano": 1790421140087000000,
+        "attributes": [
+          {
+            "key": "gen_ai.operation.name",
+            "value": {
+              "string_value": "model_generation"
+            }
+          },
+          {
+            "key": "mastra.span.type",
+            "value": {
+              "string_value": "model_generation"
+            }
+          },
+          {
+            "key": "mastra.model_generation.input",
+            "value": {
+              "kvlist_value": {
+                "values": [
+                  {
+                    "key": "messages",
+                    "value": {
+                      "array_value": {
+                        "values": [
+                          {
+                            "kvlist_value": {
+                              "values": [
+                                {
+                                  "key": "role",
+                                  "value": {
+                                    "string_value": "system"
+                                  }
+                                },
+                                {
+                                  "key": "content",
+                                  "value": {
+                                    "string_value": "Extract a profile. Never output names."
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "kvlist_value": {
+                              "values": [
+                                {
+                                  "key": "role",
+                                  "value": {
+                                    "string_value": "user"
+                                  }
+                                },
+                                {
+                                  "key": "content",
+                                  "value": {
+                                    "array_value": {
+                                      "values": [
+                                        {
+                                          "kvlist_value": {
+                                            "values": [
+                                              {
+                                                "key": "type",
+                                                "value": {
+                                                  "string_value": "text"
+                                                }
+                                              },
+                                              {
+                                                "key": "text",
+                                                "value": {
+                                                  "string_value": "[cv:sha256:dacb693fe21b]\n"
+                                                }
+                                              },
+                                              {
+                                                "key": "providerOptions",
+                                                "value": {
+                                                  "kvlist_value": {
+                                                    "values": [
+                                                      {
+                                                        "key": "mastra",
+                                                        "value": {
+                                                          "kvlist_value": {
+                                                            "values": [
+                                                              {
+                                                                "key": "createdAt",
+                                                                "value": {
+                                                                  "int_value": 1790421140060
+                                                                }
+                                                              }
+                                                            ]
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "key": "mastra.model_generation.output",
+            "value": {
+              "kvlist_value": {
+                "values": [
+                  {
+                    "key": "files",
+                    "value": {
+                      "array_value": {}
+                    }
+                  },
+                  {
+                    "key": "reasoning",
+                    "value": {
+                      "array_value": {}
+                    }
+                  },
+                  {
+                    "key": "sources",
+                    "value": {
+                      "array_value": {}
+                    }
+                  },
+                  {
+                    "key": "text",
+                    "value": {
+                      "string_value": "{\"role\":\"Senior Front-end Architect\",\"seniority\":\"senior\"}"
+                    }
+                  },
+                  {
+                    "key": "warnings",
+                    "value": {
+                      "array_value": {}
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "key": "mastra.metadata.runId",
+            "value": {
+              "string_value": "4a6d02ad-491c-[phone]-80f895346d48"
+            }
+          },
+          {
+            "key": "mastra.metadata.participantId",
+            "value": {
+              "string_value": "otter-42"
+            }
+          },
+          {
+            "key": "mastra.metadata.kind",
+            "value": {
+              "string_value": "profile"
+            }
+          },
+          {
+            "key": "mlflow.traceRequestId",
+            "value": {
+              "string_value": "tr-446ae47eb395812155265a4e51014e75"
+            }
+          }
+        ],
+        "status": {
+          "code": "STATUS_CODE_OK"
+        }
+      },
+      {
+        "trace_id": "RGrkfrOVgSFVJlpOUQFOdQ==",
+        "span_id": "a9EN/pFokGI=",
+        "parent_span_id": "WJGC9Stoevc=",
+        "name": "agent_step profile",
+        "start_time_unix_nano": 1790421140070000000,
+        "end_time_unix_nano": 1790421140085000000,
+        "attributes": [
+          {
+            "key": "gen_ai.operation.name",
+            "value": {
+              "string_value": "agent_step"
+            }
+          },
+          {
+            "key": "mastra.span.type",
+            "value": {
+              "string_value": "model_step"
+            }
+          },
+          {
+            "key": "mastra.model_step.input",
+            "value": {
+              "array_value": {
+                "values": [
+                  {
+                    "kvlist_value": {
+                      "values": [
+                        {
+                          "key": "role",
+                          "value": {
+                            "string_value": "system"
+                          }
+                        },
+                        {
+                          "key": "content",
+                          "value": {
+                            "string_value": "Extract a profile. Never output names."
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "kvlist_value": {
+                      "values": [
+                        {
+                          "key": "role",
+                          "value": {
+                            "string_value": "user"
+                          }
+                        },
+                        {
+                          "key": "content",
+                          "value": {
+                            "string_value": "[cv:sha256:dacb693fe21b]\n"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "key": "mastra.model_step.output",
+            "value": {
+              "kvlist_value": {
+                "values": [
+                  {
+                    "key": "text",
+                    "value": {
+                      "string_value": "{\"role\":\"Senior Front-end Architect\",\"seniority\":\"senior\"}"
+                    }
+                  },
+                  {
+                    "key": "toolCalls",
+                    "value": {
+                      "array_value": {}
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "key": "mastra.model_step.step_index",
+            "value": {
+              "int_value": 0
+            }
+          },
+          {
+            "key": "mastra.model_step.is_continued",
+            "value": {
+              "bool_value": false
+            }
+          },
+          {
+            "key": "mastra.metadata.runId",
+            "value": {
+              "string_value": "4a6d02ad-491c-[phone]-80f895346d48"
+            }
+          },
+          {
+            "key": "mastra.metadata.participantId",
+            "value": {
+              "string_value": "otter-42"
+            }
+          },
+          {
+            "key": "mastra.metadata.kind",
+            "value": {
+              "string_value": "profile"
+            }
+          },
+          {
+            "key": "mastra.metadata.modelMetadata",
+            "value": {
+              "kvlist_value": {
+                "values": [
+                  {
+                    "key": "modelId",
+                    "value": {
+                      "string_value": "mock-task"
+                    }
+                  },
+                  {
+                    "key": "modelVersion",
+                    "value": {
+                      "string_value": "v4"
+                    }
+                  },
+                  {
+                    "key": "modelProvider",
+                    "value": {
+                      "string_value": "talk-picker-mock"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "key": "mlflow.traceRequestId",
+            "value": {
+              "string_value": "tr-446ae47eb395812155265a4e51014e75"
+            }
+          }
+        ],
+        "status": {
+          "code": "STATUS_CODE_OK"
+        }
+      },
+      {
+        "trace_id": "RGrkfrOVgSFVJlpOUQFOdQ==",
+        "span_id": "4o4uDb6MrDE=",
+        "parent_span_id": "a9EN/pFokGI=",
+        "name": "chat mock-task",
+        "start_time_unix_nano": 1790421140074000000,
+        "end_time_unix_nano": 1790421140085000000,
+        "attributes": [
+          {
+            "key": "gen_ai.operation.name",
+            "value": {
+              "string_value": "chat"
+            }
+          },
+          {
+            "key": "mastra.span.type",
+            "value": {
+              "string_value": "model_inference"
+            }
+          },
+          {
+            "key": "gen_ai.output.messages",
+            "value": {
+              "array_value": {
+                "values": [
+                  {
+                    "kvlist_value": {
+                      "values": [
+                        {
+                          "key": "role",
+                          "value": {
+                            "string_value": "assistant"
+                          }
+                        },
+                        {
+                          "key": "parts",
+                          "value": {
+                            "array_value": {
+                              "values": [
+                                {
+                                  "kvlist_value": {
+                                    "values": [
+                                      {
+                                        "key": "type",
+                                        "value": {
+                                          "string_value": "text"
+                                        }
+                                      },
+                                      {
+                                        "key": "content",
+                                        "value": {
+                                          "string_value": "{\"role\":\"Senior Front-end Architect\",\"seniority\":\"senior\"}"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "key": "gen_ai.request.model",
+            "value": {
+              "string_value": "mock-task"
+            }
+          },
+          {
+            "key": "gen_ai.provider.name",
+            "value": {
+              "string_value": "talk-picker-mock"
+            }
+          },
+          {
+            "key": "gen_ai.usage.input_tokens",
+            "value": {
+              "int_value": 321
+            }
+          },
+          {
+            "key": "gen_ai.usage.output_tokens",
+            "value": {
+              "int_value": 20
+            }
+          },
+          {
+            "key": "gen_ai.usage.reasoning_tokens",
+            "value": {
+              "int_value": 0
+            }
+          },
+          {
+            "key": "gen_ai.usage.cache_read.input_tokens",
+            "value": {
+              "int_value": 0
+            }
+          },
+          {
+            "key": "gen_ai.usage.cache_creation.input_tokens",
+            "value": {
+              "int_value": 0
+            }
+          },
+          {
+            "key": "gen_ai.agent.id",
+            "value": {
+              "string_value": "profile-agent"
+            }
+          },
+          {
+            "key": "gen_ai.agent.name",
+            "value": {
+              "string_value": "profile"
+            }
+          },
+          {
+            "key": "mastra.completion_start_time",
+            "value": {
+              "string_value": "2026-09-26T11:12:20.079Z"
+            }
+          },
+          {
+            "key": "gen_ai.response.finish_reasons",
+            "value": {
+              "array_value": {
+                "values": [
+                  {
+                    "string_value": "stop"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "key": "mastra.metadata.runId",
+            "value": {
+              "string_value": "4a6d02ad-491c-[phone]-80f895346d48"
+            }
+          },
+          {
+            "key": "mastra.metadata.participantId",
+            "value": {
+              "string_value": "otter-42"
+            }
+          },
+          {
+            "key": "mastra.metadata.kind",
+            "value": {
+              "string_value": "profile"
+            }
+          },
+          {
+            "key": "mlflow.traceRequestId",
+            "value": {
+              "string_value": "tr-446ae47eb395812155265a4e51014e75"
+            }
+          },
+          {
+            "key": "mlflow.spanType",
+            "value": {
+              "string_value": "CHAT_MODEL"
+            }
+          },
+          {
+            "key": "mlflow.spanOutputs",
+            "value": {
+              "array_value": {
+                "values": [
+                  {
+                    "kvlist_value": {
+                      "values": [
+                        {
+                          "key": "role",
+                          "value": {
+                            "string_value": "assistant"
+                          }
+                        },
+                        {
+                          "key": "parts",
+                          "value": {
+                            "array_value": {
+                              "values": [
+                                {
+                                  "kvlist_value": {
+                                    "values": [
+                                      {
+                                        "key": "type",
+                                        "value": {
+                                          "string_value": "text"
+                                        }
+                                      },
+                                      {
+                                        "key": "content",
+                                        "value": {
+                                          "string_value": "{\"role\":\"Senior Front-end Architect\",\"seniority\":\"senior\"}"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "key": "mlflow.chat.tokenUsage",
+            "value": {
+              "kvlist_value": {
+                "values": [
+                  {
+                    "key": "input_tokens",
+                    "value": {
+                      "int_value": 321
+                    }
+                  },
+                  {
+                    "key": "output_tokens",
+                    "value": {
+                      "int_value": 20
+                    }
+                  },
+                  {
+                    "key": "total_tokens",
+                    "value": {
+                      "int_value": 341
+                    }
+                  },
+                  {
+                    "key": "cache_read_input_tokens",
+                    "value": {
+                      "int_value": 0
+                    }
+                  },
+                  {
+                    "key": "cache_creation_input_tokens",
+                    "value": {
+                      "int_value": 0
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "key": "mlflow.llm.model",
+            "value": {
+              "string_value": "mock-task"
+            }
+          },
+          {
+            "key": "mlflow.llm.provider",
+            "value": {
+              "string_value": "talk-picker-mock"
+            }
+          }
+        ],
+        "status": {
+          "code": "STATUS_CODE_OK"
+        }
+      },
+      {
+        "trace_id": "RGrkfrOVgSFVJlpOUQFOdQ==",
+        "span_id": "hcjHy/310fI=",
+        "parent_span_id": "4o4uDb6MrDE=",
+        "name": "model_chunk profile",
+        "start_time_unix_nano": 1790421140079000000,
+        "end_time_unix_nano": 1790421140080000000,
+        "attributes": [
+          {
+            "key": "gen_ai.operation.name",
+            "value": {
+              "string_value": "model_chunk"
+            }
+          },
+          {
+            "key": "mastra.span.type",
+            "value": {
+              "string_value": "model_chunk"
+            }
+          },
+          {
+            "key": "mastra.model_chunk.output",
+            "value": {
+              "kvlist_value": {
+                "values": [
+                  {
+                    "key": "text",
+                    "value": {
+                      "string_value": "{\"role\":\"Senior Front-end Architect\",\"seniority\":\"senior\"}"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "key": "mastra.metadata.runId",
+            "value": {
+              "string_value": "4a6d02ad-491c-[phone]-80f895346d48"
+            }
+          },
+          {
+            "key": "mastra.metadata.participantId",
+            "value": {
+              "string_value": "otter-42"
+            }
+          },
+          {
+            "key": "mastra.metadata.kind",
+            "value": {
+              "string_value": "profile"
+            }
+          },
+          {
+            "key": "mlflow.traceRequestId",
+            "value": {
+              "string_value": "tr-446ae47eb395812155265a4e51014e75"
+            }
+          }
+        ],
+        "status": {
+          "code": "STATUS_CODE_OK"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "talk-picker",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:5.2.1-22-bookworm",
+  "features": {},
+  "hostRequirements": { "cpus": 2, "memory": "4gb" },
+  "onCreateCommand": "npm install -g pnpm@12.6.0",
+  "updateContentCommand": "pnpm install --frozen-lockfile",
+  "postCreateCommand": "test -f .env || cp .env.example .env",
+  "postAttachCommand": "pnpm run doctor || true",
+  "forwardPorts": [],
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
+      "settings": {
+        "editor.formatOnSave": false,
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "files.exclude": { "node_modules": true, "coverage": true }
+      }
+    }
+  }
+}

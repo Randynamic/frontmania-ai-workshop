@@ -1,0 +1,19 @@
+{
+  "role": "Engineering manager for two front-end teams",
+  "seniority": "lead",
+  "stack": ["TypeScript", "React", "Next.js", "Node.js", "GitHub", "CI/CD", "feature flags"],
+  "interests": [
+    "future role of front-end engineers",
+    "organisational impact of AI tooling",
+    "release engineering with AI",
+    "design-system governance across teams",
+    "measuring AI features in production",
+    "developer experience"
+  ],
+  "avoid": [
+    "deep framework internals",
+    "CSS-only talks",
+    "hardware demos",
+    "follow-along live coding"
+  ]
+}

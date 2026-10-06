@@ -1,0 +1,22 @@
+CURRICULUM VITAE
+Jan de Vries
+Utrecht, jan.devries@example.org, 06 0000 0011
+
+PROFILE
+Frontend engineer with nine years in e-commerce. I care about checkout flows,
+web performance and design systems.
+
+WORK EXPERIENCE
+2021 - present   Senior Frontend Engineer - Winkelwagen.nl
+                 Rebuilt the checkout in Next.js; conversion went up six percent.
+2017 - 2021      Frontend Developer at Koelblauw
+                 Owned the product pages and the A/B testing setup.
+2015 - 2017      Junior developer, Pakketpost B.V.
+
+EDUCATION
+HBO Informatica, Hogeschool Utrecht
+
+SKILLS
+React, TypeScript, Next.js, Vue, Cypress, Figma
+
+Fictional plain-text CV for the masking tests of the Frontmania 2026 workshop. Not a real person, employer, address or phone number.

@@ -1,0 +1,221 @@
+{
+  "event": "Frontmania 2026",
+  "source": "https://sessionize.com/api/v2/gx2dpiu7/view/Sessions?under=true",
+  "snapshotAt": "2026-09-26T11:01:58.945Z",
+  "fixture": false,
+  "slots": [
+    "14:15",
+    "15:30",
+    "16:30"
+  ],
+  "talks": [
+    {
+      "id": "fm26-1227996",
+      "title": "Human-in-the-Loop Beyond Approval: Toward True Collaboration",
+      "speakers": [
+        "Manfred Steyer"
+      ],
+      "slot": "14:15",
+      "room": "Progress",
+      "durationMin": 45,
+      "abstract": "Fully autonomous agents sound powerful—but in real-world applications, they are often hard to trust, difficult to control, and risky when decisions matter.\n\nThis session shows how to implement Human-in-the-Loop (HITL) in practice. Moving beyond simple approvals, we explore context-aware follow-up questions, action cards, recoverable workflows, as well as co-planning. You’ll see how AG-UI enables structured, interruptible interactions—allowing agents to request input, adapt their plans, and collaborate with users in real time.\n\nBy the end, you’ll understand how to design and apply HITL patterns leveraging an open standard to build transparent, controllable, and user-aligned systems.",
+      "startTime": "14:15",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1249439",
+      "title": "Shift Happens: Why the Future of Frontend Isn’t in the Syntax",
+      "speakers": [
+        "Rick van Gerwen"
+      ],
+      "slot": "14:15",
+      "room": "Mission 1",
+      "durationMin": 20,
+      "abstract": "This talk maps out the inevitable transformation of frontend engineering in the age of AI. I’ve noticed a critical shift in our industry: our challenge is no longer generating code quickly, but guiding, validating, and sustaining it. While AI rapidly automates component building, this unchecked speed introduces severe risks like technical debt and architectural drift.\n\nWe will look at frontend to map out our necessary evolution from specialized UI builders into a high-over engineer who can translate complex business rules into coherent systems.\n\nForget the tooling, this session focuses entirely on the mindset shift required to thrive. You will walk away to confidently step into the new role frontend developers will occupy in the next phase of frontend engineering.",
+      "startTime": "14:15",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1150358",
+      "title": "Warp Pipes and Prefetching: Navigating the Web at Mario Speed",
+      "speakers": [
+        "Rowdy Rabouw"
+      ],
+      "slot": "14:15",
+      "room": "Mission 2",
+      "durationMin": 45,
+      "abstract": "Long wait times are the \"Bowser\" of the good user experience. Even if your site looks great, slow transitions or blank loading screens can make users feel like they’ve fallen down a bottomless pit. But what if your website could predict the future, stay resilient offline, and move between pages as smoothly as a Warp Pipe?\n\nIn this session, we’ll explore the \"Power-Up\" trio of modern web development:\n- Speculation Rules API: See how prefetching and prerendering can load pages before users click.\n- Service Workers: Find out how to build a caching layer so your assets are always ready, even when the network is out of \"lives\".\n- View Transition API: Use animations to help users move smoothly through your \"world map\" with ease.\n\nWe’ll break down the technical plumbing required to make these APIs work nicely together. You will leave this session with the cheat codes needed to deliver a fast, seamless experience that will have your users saying, \"Mamma Mia, that’s fast!\"",
+      "startTime": "14:15",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1250255",
+      "title": "So your components are accessible? Doesn't mean your application is!",
+      "speakers": [
+        "Ramona Domen"
+      ],
+      "slot": "14:15",
+      "room": "Expedition",
+      "durationMin": 45,
+      "abstract": "You've invested in an accessible design system. Your buttons work with a keyboard, your form fields have proper labels, and your components pass accessibility audits. Great! But accessibility doesn't magically emerge when you assemble those components into an application.\n\nMany teams focus heavily on building accessible component libraries, only to discover that real-world accessibility challenges live in the spaces between the components. Page structure, focus management, user flows, dynamic content, error handling, navigation patterns, and contextual information all play a critical role in determining whether an application is truly accessible.\n\nIn this talk, we'll explore the gap between component accessibility and application accessibility. Through practical examples and common pitfalls, you'll learn where accessibility often breaks down after implementation and how to build accessibility into the user experience, not just the individual building blocks.\n\nYou'll leave with a broader understanding of accessibility, actionable techniques for evaluating your applications, and a roadmap for moving beyond accessible components to create genuinely accessible products.",
+      "startTime": "14:15",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1146305",
+      "title": "From Codebase to Community: The Renewal Story of a Legacy Design System",
+      "speakers": [
+        "Daniel Yuschick"
+      ],
+      "slot": "14:15",
+      "room": "Quest",
+      "durationMin": 45,
+      "abstract": "What happens when a design system releases frequent breaking changes, doesn't document itself and builds in isolation? It breaks trust and builds a company-wide attitude of \"it's faster to do it myself.\"\n\nIn this practical case study we review the design systems of two of Finland's largest institutes, as we modernize not just their technical foundations but their communities. We’ll explore how shifting our focus from code to people, through transparent processes, community-driven releases, and robust documentation, turned neglected and fragile legacy systems into a trusted, long-term platforms.\n\nAttendees will leave with practical lessons on rebuilding a design system’s reputation, re-engaging stakeholders, and balancing technical updates with human-centered change.",
+      "startTime": "14:15",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1223815",
+      "title": "Git Worktrees: One Repo, N Coding Agents",
+      "speakers": [
+        "Wouter Van Schandevijl"
+      ],
+      "slot": "14:15",
+      "room": "Mission 1",
+      "durationMin": 20,
+      "abstract": "You've got Claude Code in one terminal, Codex in another, and a background agent on a third PR. They all want `git checkout`, and one of them is about to nuke your uncommitted work. `git worktree` fixes this in one command — and in 2026, it's no longer a power-user trick, it's table stakes.",
+      "startTime": "14:40",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1145006",
+      "title": "From browser to motors: real-time IoT with Angular",
+      "speakers": [
+        "Soumaya Erradi"
+      ],
+      "slot": "15:30",
+      "room": "Progress",
+      "durationMin": 45,
+      "abstract": "What if Angular could drive a real robot?\nIn this talk, we’ll connect an Angular app to a micro-car and use signals and WebSockets to control motors, stream sensor data, and react to the physical environment in real time. Through live demos and practical patterns, you’ll see how Angular’s reactivity model is ideal for building fast, event-driven systems far beyond the browser.",
+      "startTime": "15:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1141925",
+      "title": "Programming principles for front-end developers",
+      "speakers": [
+        "Kilian Valkhof"
+      ],
+      "slot": "15:30",
+      "room": "Mission 1",
+      "durationMin": 45,
+      "abstract": "Front-end development has evolved from building pages with HTML to building complex applications using the web platform, yet many developers miss out on powerful programming principles that can help improve their code quality, productivity and effectiveness.\n\nThis talk goes over time-tested rules of thumb like the rule of three, the single responsibility principle and other pragmatic guidelines that aren't taught in front-end contexts but offer immediate benefits. We'll go over how they can be applied to typical front-end work like UI component design, state management and data handling.\n\nAs someone who had to find and learn these maxims in the wild to discover how useful they are, this is the talk I wish I had when I just started out: pragmatic, useful and directly applicable to the work front-end devs do.",
+      "startTime": "15:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1196635",
+      "title": "CSS State Machine",
+      "speakers": [
+        "Brecht De Ruyte"
+      ],
+      "slot": "15:30",
+      "room": "Mission 2",
+      "durationMin": 45,
+      "abstract": "For years, managing UI state on the web usually meant reaching for JavaScript. But in 2026, CSS has quietly become a state machine of its own. Pseudo-classes track interaction. Media queries read the environment and user preferences. :has() observes the DOM tree. Container queries respond to size, style, scroll position, and even anchor placement. Scroll-driven and scroll-triggered animations react to where the user is on the page. And with sibling-index, CSS can now respond to what's happening next door.\n\nIn this atypical overview talk, you'll get a practical tour of the CSS features that let you keep and respond to state — from things you can ship today to the cutting-edge stuff landing in browsers right now. Welcome CSS, to the state machine.",
+      "startTime": "15:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1141979",
+      "title": "🔐OIDC as LEGO Brick",
+      "speakers": [
+        "Peter Eijgermans"
+      ],
+      "slot": "15:30",
+      "room": "Expedition",
+      "durationMin": 45,
+      "abstract": "Authentication is one of the fastest ways micro frontend architectures turn into micro nightmares. Every app rolling its own OAuth flow. Tokens leaking into the browser. Inconsistent login states across independently deployed frontends. Sound familiar?\n\nIn this talk, we’ll show a proven, production-grade alternative: an OpenID Connect–based Backend-for-Frontend (BFF) implemented as a reusable, framework-agnostic building block, successfully running at scale for the Dutch Railways (NS).\n\nInstead of pushing OAuth complexity into every frontend (hello, MSAL sprawl), we move authentication out of the apps entirely. Authentication is handled by a central BFF that acts as an interchangeable “LEGO brick”: frontends plug into it, but remain unaware of OAuth, tokens, or identity providers.\n\nUsing EntraID orKeycloak, NGINX, Openresty, lua, Angular, Spring Boot, and Module Federation, we’ll walk through a real-world micro frontend platform where:\n\n- authentication is centralized,\n\n- tokens never reach the browser,\n\n- host and remote apps share session state without tight coupling,\n\n- and teams can deploy independently with confidence.\n\nThrough a live, hands-on demo inspired by this setup, you’ll see how this agnostic BFF layer enables seamless authentication across host and remote applications—regardless of framework or deployment cadence.",
+      "startTime": "15:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1232518",
+      "title": "Vibe coding made the web sick. Now it can fix it.",
+      "speakers": [
+        "Sander van Surksum"
+      ],
+      "slot": "15:30",
+      "room": "Quest",
+      "durationMin": 45,
+      "abstract": "Since AI coding tools went mainstream, the web has been gaining weight fast. Research shows the average site's JavaScript has grown three times faster than before. The reason is simple: AI writes code that looks right, not code that runs fast. And here's the irony, most AI crawlers can't even read the heavy sites that AI built, because they don't run JavaScript.\n\nThe good news: the same AI agents that caused this can help fix it. In 2025, Chrome DevTools MCP gave AI agents the ability to actually measure what they build. Combined with Agent Skills, we can turn an AI agent into something closer to a careful performance engineer.\nIn this talk we look at three things:\n\n- The data: what really happened to the web after November 2022\n- The cause: why AI writes slow code, and why it couldn't see what it shipped\n- The fix: a working protocol you can use, with Chrome DevTools MCP and a performance skill you can install today\n\nYou leave with a ready-to-use performance skill, real before/after numbers, and a clear way to make AI build faster sites instead of heavier ones.",
+      "startTime": "15:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1212826",
+      "title": "(Workshop): From idea to production: AI-driven web development with Antigravity",
+      "speakers": [
+        "Talia Asghar"
+      ],
+      "slot": "15:30",
+      "room": "Workshop area",
+      "durationMin": 105,
+      "abstract": "The core concept for this workshop is Spec-Driven Development (SDD).\n\nInstead of coding first and writing docs later, spec-driven development starts with a spec — a contract for how your code should behave, which becomes the source of truth for your tools and AI agents to generate, test, and validate code. The result is less guesswork, fewer surprises, and higher-quality code.\n\nIn this hands-on workshop, you'll learn Spec-Driven Development: write what your app should do in plain English, let Google Antigravity generate the tests, then let it build the code to pass them.",
+      "startTime": "15:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1307365",
+      "title": "The Shopping Dead: A Zombie's Guide to Web Accessibility",
+      "speakers": [
+        "Daniel Yuschick"
+      ],
+      "slot": "16:30",
+      "room": "Progress",
+      "durationMin": 45,
+      "abstract": "Imagine waking up as a zombie and trying to use today’s web. Interfaces now depend on dynamic notifications, warnings, and alerts that appear and disappear in moments. For screen reader users, these updates can be confusing, overwhelming, or completely invisible.\n\nIn this talk, we step into that experience as Romero, a zombie navigating the modern web. Using immersive demos and “zombie vision” screen recordings, we explore how dynamic content behaves for assistive technology users and where it commonly breaks down. From there, we uncover how ARIA live regions work, when they should be used, and how to design notifications and status updates that are inclusive, reliable, and understandable.\n\nBlending storytelling with practical implementation guidance, this session helps teams move beyond treating accessibility as a checklist and toward designing dynamic experiences that work for everyone, undead or otherwise.",
+      "startTime": "16:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1169454",
+      "title": "customElements & beyond: a lean way to build reactive apps in vanillaJS",
+      "speakers": [
+        "Emiliano Pisu"
+      ],
+      "slot": "16:30",
+      "room": "Mission 1",
+      "durationMin": 45,
+      "abstract": "You know when people tell you that without a framework you can't build a \"real\" app? Well… spoiler alert: that’s a lie.\nCustom Elements are no longer a toy for old-school HTML addicted, they're the gateway to a whole new way of building apps: lightweight, accessible, and blazing fast.\nAnd the best part? No endless npm install marathons required.\n\nIn this talk we’ll explore cutting-edge browser APIs like Observables, Signals, Constructable Stylesheets, and more, showing how to make your native components do their magic like they’re powered by a framework… but without the framework.\n\nIt’s a journey into reactivity, semantics, and the future of the web, because vanillaJS isn’t old school, it’s the next level.",
+      "startTime": "16:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1233186",
+      "title": "Context Engineering: Stateless by Default, Stateful by Design",
+      "speakers": [
+        "Giorgio Galassi"
+      ],
+      "slot": "16:30",
+      "room": "Mission 2",
+      "durationMin": 45,
+      "abstract": "Every time you start a new AI-assisted session, your agents start blind. No memory of last week's architectural decision. No knowledge of why you chose that pattern three projects ago. No awareness that the session ended before you finished. So you explain everything from scratch.\n\nContext engineering is the discipline of fixing that: deciding what your agents know, when they know it, and how that knowledge survives session boundaries and tool switches. It's distinct from prompt engineering, and arguably the higher-leverage skill when building with AI agents.\n\nThis talk covers the techniques behind persistent AI memory: index-first loading, anchored iterative summarization, phase-based context loading. The architectural decisions that shaped them. And why the right answer turned out to be simpler than you'd expect.",
+      "startTime": "16:30",
+      "year": 2026
+    },
+    {
+      "id": "fm26-1233746",
+      "title": "From Bottleneck to Release Pilots",
+      "speakers": [
+        "Teresa wu"
+      ],
+      "slot": "16:30",
+      "room": "Quest",
+      "durationMin": 45,
+      "abstract": "Release engineers currently spend 40% of their time manually verifying environment health, creating a bottleneck that forces teams into risky, oversized release batches.\n\nThis session presents a transformative roadmap to move AI beyond simple code assistance into the role of an autonomous \"Release Pilot\".\n\nAttendees will learn how Gemini AI reimagines the entire release lifecycle:\n\n- Intelligent Automation: From semantic PR triage and self-healing CI/CD pipelines to \"Intelligent Test Selection\" that reduces test suites to the most relevant 5%.\n\n- Predictive Risk Assessment: Replacing subjective \"Go/No-Go\" meetings with a quantitative \"Release Confidence Index\" (RCI) based on stability, complexity, security, and observability signals.\n\n- Post-Release Intelligence: Automating stakeholder-specific release notes and using post-release metrics to turn failures into blueprints for future velocity.\n\nWe conclude with a pragmatic 90-day migration path—Observe, Advise, and Pilot—designed to build team trust while achieving an 80% reduction in manual release meetings. Join us to discover how to build a release process that isn't just faster, but smarter and self-healing.",
+      "startTime": "16:30",
+      "year": 2026
+    }
+  ]
+}

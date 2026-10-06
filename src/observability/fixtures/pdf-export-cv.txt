@@ -1,0 +1,15 @@
+Page 1 of 2
+Curriculum Vitae - exported 14-09-2026
+Confidential
+
+Name: pieter van den berg
+Address: Lijnbaansgracht 400, postcode 1015 CX Amsterdam
+Contact: pieter.vdberg@example.org, 06 0000 0042
+Links: github.com/pvdb, linkedin.com/in/pieter-vdberg
+
+profile
+frontend dev at coolblue since 2020, before that at scale with a small agency.
+I like design systems and web performance.
+
+skills
+react, typescript, next.js, playwright

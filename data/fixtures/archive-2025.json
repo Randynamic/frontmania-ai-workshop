@@ -1,0 +1,278 @@
+{
+  "year": 2025,
+  "source": "https://sessionize.com/api/v2/ary2w1mc/view/Sessions?under=true",
+  "snapshotAt": "2026-09-26T10:00:00.000Z",
+  "fixture": true,
+  "talks": [
+    {
+      "id": "fm25-fx-01",
+      "year": 2025,
+      "title": "Streaming UI From the Server Without Losing Your Mind",
+      "speakers": ["Ilse Brandsma"],
+      "abstract": "Server-driven interfaces promise less client code and more control; in practice they raise questions about latency, caching and interactivity. This talk builds a streaming product page step by step, measures each step and shows where the approach pays off.",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-02",
+      "year": 2025,
+      "title": "Typed at the Edge: Contracts Between Front-end and API",
+      "speakers": ["Karel Diepenbrock"],
+      "abstract": "Schema validation at every boundary sounds like boilerplate until the first malformed payload reaches production. We compare code generation, runtime validation and shared packages, with numbers from a portal that switched twice.",
+      "room": "Mission 1",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-03",
+      "year": 2025,
+      "title": "The Long Tail of Web Performance",
+      "speakers": ["Nadia Kortenhoeven"],
+      "abstract": "Median metrics look fine while a tenth of users suffer. This session digs into field data, finds the devices and networks behind the tail, and shows the fixes that moved the 90th percentile: fewer fonts, smarter hydration, and honest budgets.",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-04",
+      "year": 2025,
+      "title": "Forms People Can Finish",
+      "speakers": ["Femke Lageweg"],
+      "abstract": "Forms are where accessibility fails quietly. We go through labels, error summaries, focus management and validation timing with assistive-technology recordings, then turn each finding into a test you can automate.",
+      "room": "Expedition",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-05",
+      "year": 2025,
+      "title": "Design Tokens Across Three Frameworks",
+      "speakers": ["Tobias Wennekes"],
+      "abstract": "One design language, three front-end stacks. How a public organisation built a token pipeline that feeds React, Angular and plain CSS, what broke along the way, and how the team keeps the tokens honest.",
+      "room": "Quest",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-06",
+      "year": 2025,
+      "title": "Testing Strategy for a Twenty-Person Front-end",
+      "speakers": ["Marloes Kuiper"],
+      "abstract": "Unit, component, contract and end-to-end tests each catch different failures. This talk shows how one organisation decided what goes where, what ran in CI, and which tests were deleted because they only ever went green.",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-07",
+      "year": 2025,
+      "title": "Container Queries in Production",
+      "speakers": ["Jonas Vandeputte"],
+      "abstract": "Container queries moved responsive design from the viewport to the component. Real examples from a component library: the patterns that emerged, the ones that failed, and what changed in how designers and developers talk.",
+      "room": "Mission 1",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-08",
+      "year": 2025,
+      "title": "Signals Everywhere: A Comparison",
+      "speakers": ["Priya Raghunathan"],
+      "abstract": "Signals arrived in several frameworks at once with different semantics. We compare the mental models, the pitfalls when mixing signals with existing state, and what the proposal for signals in the platform would change.",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-09",
+      "year": 2025,
+      "title": "Zero-Trust Front-ends: Sessions, Tokens and Cookies",
+      "speakers": ["Karel Diepenbrock"],
+      "abstract": "Where should the token live? This session walks through the options for browser applications, the attacks each one invites, and the backend-for-frontend pattern that removes most of the problem.",
+      "room": "Expedition",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-10",
+      "year": 2025,
+      "title": "From Monolith to Micro Front-ends and Halfway Back",
+      "speakers": ["Ruben Achterberg"],
+      "abstract": "A three-year story: splitting a large application into independently deployed front-ends, the coordination costs nobody planned for, and the partial merge that followed. Lessons for teams considering the same move.",
+      "room": "Quest",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-11",
+      "year": 2025,
+      "title": "Web Components That Play Nicely With Frameworks",
+      "speakers": ["Lars Bijlsma"],
+      "abstract": "Custom elements are framework-agnostic in theory. In practice, events, properties, forms and server rendering each need care. We show the wrappers, the tests and the conventions that made one library usable from three frameworks.",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-12",
+      "year": 2025,
+      "title": "Motion With Consent: Animations and Reduced-Motion Preferences",
+      "speakers": ["Hanna Verlinde"],
+      "abstract": "Animation improves comprehension until it hurts someone. This talk pairs modern CSS animation features with the preferences users actually set, and shows how to design motion that degrades well.",
+      "room": "Mission 1",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-13",
+      "year": 2025,
+      "title": "Prompting Is Not Programming: Using AI Assistants Without Losing Skills",
+      "speakers": ["Esther Nooteboom"],
+      "abstract": "AI assistants speed up the easy parts and hide the hard parts. Concrete habits for developers who want the productivity without forgetting how the code works, with examples from onboarding juniors.",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-14",
+      "year": 2025,
+      "title": "Edge Rendering for a European Audience",
+      "speakers": ["Sven Oldenhuis"],
+      "abstract": "Rendering close to the user is only useful if the data is close too. Practical experience with edge functions, regional databases and caching for a Dutch retail platform, including the cases where edge made things slower.",
+      "room": "Expedition",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-15",
+      "year": 2025,
+      "title": "Observability for Front-end Teams",
+      "speakers": ["Selma Haddadi"],
+      "abstract": "Backend teams have traces, front-end teams have error counts. We show how to instrument a web application with distributed tracing, connect a click to a database query, and what that changed in incident reviews.",
+      "room": "Quest",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-16",
+      "year": 2025,
+      "title": "The Accessibility Audit You Can Run Every Sprint",
+      "speakers": ["Femke Lageweg"],
+      "abstract": "Annual audits find problems a year late. This session builds a lightweight recurring audit: automated checks, one manual screen-reader pass per feature, and a scoring model teams accept.",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-17",
+      "year": 2025,
+      "title": "Islands, Partial Hydration and the Return of HTML",
+      "speakers": ["Ilse Brandsma"],
+      "abstract": "Shipping less JavaScript is a strategy, not a slogan. We compare island architectures across tools, measure hydration cost on mid-range phones, and show how to migrate one page at a time.",
+      "room": "Mission 1",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-18",
+      "year": 2025,
+      "title": "State Management Without a Library",
+      "speakers": ["Marloes Kuiper"],
+      "abstract": "Most applications need less state machinery than they carry. This talk shows how far the platform and a few patterns go, when a library is worth it, and how to migrate without a rewrite.",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-19",
+      "year": 2025,
+      "title": "Scroll-Driven Animation in Fifteen Minutes",
+      "speakers": ["Jonas Vandeputte"],
+      "abstract": "A short live demo of scroll-timeline and animation-timeline: what they replace, what browsers support today, and the one gotcha that catches everyone.",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-20",
+      "year": 2025,
+      "title": "The Cost of a Dependency",
+      "speakers": ["Sven Oldenhuis"],
+      "abstract": "Every package is a decision with a maintenance bill. Data from auditing a large monorepo: what the dependencies cost in build time, bundle size and security work, and the policy that followed.",
+      "room": "Quest",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-21",
+      "year": 2025,
+      "title": "Hands-on: Building an Accessible Component From Scratch",
+      "speakers": ["Femke Lageweg"],
+      "abstract": "A workshop in which you build one composite component, from semantics to keyboard behaviour to tests, with screen readers running the whole time. Bring a laptop.",
+      "room": "Workshop area",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-22",
+      "year": 2025,
+      "title": "Lightning: Fonts Without the Flash",
+      "speakers": ["Nadia Kortenhoeven"],
+      "abstract": "Fifteen minutes on font loading strategies, size-adjust fallbacks and what actually eliminates layout shift.",
+      "room": "Expedition",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-23",
+      "year": 2025,
+      "title": "Lightning: Your Bundle Analyser Is Lying",
+      "speakers": ["Esther Nooteboom"],
+      "abstract": "Fifteen minutes on the differences between bundle size, transfer size and execution cost, and which one to put on the dashboard.",
+      "room": "Expedition",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-24",
+      "year": 2025,
+      "title": "Server Actions and Where Your Data Goes",
+      "speakers": ["Ruben Achterberg"],
+      "abstract": "Framework features that blur the client-server line make it easy to forget which code runs where. We trace the data flow of a typical form submission, spot the leaks, and set up the guardrails.",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-25",
+      "year": 2025,
+      "title": "Angular in 2025: Signals, Standalone and What to Migrate First",
+      "speakers": ["Priya Raghunathan"],
+      "abstract": "A practical migration order for large Angular applications: standalone components, signals, new control flow and the build system. What gave the most benefit per hour and what we deferred.",
+      "room": "Mission 1",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-26",
+      "year": 2025,
+      "title": "Designing APIs for Front-end Teams",
+      "speakers": ["Karel Diepenbrock"],
+      "abstract": "API design decisions that make front-end work painful or pleasant: pagination, errors, partial responses and versioning, with examples from a backend-for-frontend layer that grew organically.",
+      "room": "Mission 2",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-27",
+      "year": 2025,
+      "title": "The Design System Is a Product",
+      "speakers": ["Tobias Wennekes"],
+      "abstract": "Treating a component library as a product changes everything: roadmap, support, deprecation policy and success metrics. The story of a team that made the switch and the adoption numbers before and after.",
+      "room": "Expedition",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-28",
+      "year": 2025,
+      "title": "Rendering Maps and Charts Accessibly",
+      "speakers": ["Hanna Verlinde"],
+      "abstract": "Data visualisation is where accessibility gives up first. We show alternatives to canvas-only charts, description strategies for maps and how to test them with users who cannot see the picture.",
+      "room": "Quest",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-29",
+      "year": 2025,
+      "title": "Feature Flags, Experiments and the Front-end",
+      "speakers": ["Selma Haddadi"],
+      "abstract": "Flags are easy to add and hard to remove. Lessons from running experiments at scale: how flags reach the client, how to keep them from becoming permanent, and how to measure without slowing pages down.",
+      "room": "Progress",
+      "videoUrl": null
+    },
+    {
+      "id": "fm25-fx-30",
+      "year": 2025,
+      "title": "Closing: What We Learned Building With AI This Year",
+      "speakers": ["Lars Bijlsma"],
+      "abstract": "A candid retrospective from four teams on where AI tooling helped, where it hurt, and what they would tell themselves a year ago. No product pitches.",
+      "room": "Quest",
+      "videoUrl": null
+    }
+  ]
+}

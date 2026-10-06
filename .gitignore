@@ -1,0 +1,23 @@
+node_modules/
+.env
+.env.local
+infra/.env
+infra/secrets/
+.talk-picker/
+# a participant's own CV (pnpm run profile --cv private/cv.md); never committed, never stashed
+private/
+coverage/
+dist/
+*.tsbuildinfo
+infra/backend/data/
+infra/scripts/out/
+keys.csv
+cards.html
+optimize/.venv/
+optimize/out/
+.DS_Store
+
+# SQLite side files; recreated on every open, never committed
+*.db-shm
+*.db-wal
+*.db-journal

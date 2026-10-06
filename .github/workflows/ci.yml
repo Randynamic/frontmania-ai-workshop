@@ -1,0 +1,72 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 5 * * *' # nightly: API drift shows before 7 Oct, Sessionize drift does not matter
+
+env:
+  MODEL_MODE: mock
+  CHECK_MODE: static
+
+jobs:
+  branch:
+    name: ${{ matrix.branch }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        branch: [00-setup, 01-start, 01-done, 02-start, 02-done, 03-start, 03-done, final]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.branch }}
+        continue-on-error: true
+        id: checkout
+      - name: Skip branches that do not exist yet
+        if: steps.checkout.outcome == 'failure'
+        run: echo "branch ${{ matrix.branch }} not pushed yet" && exit 0
+      - uses: actions/setup-node@v4
+        if: steps.checkout.outcome == 'success'
+        with:
+          node-version-file: .nvmrc
+      - name: Enable pnpm from packageManager
+        if: steps.checkout.outcome == 'success'
+        run: corepack enable && corepack prepare pnpm@12.6.0 --activate
+      - name: Install
+        if: steps.checkout.outcome == 'success'
+        run: pnpm install --frozen-lockfile
+      - name: Typecheck
+        if: steps.checkout.outcome == 'success'
+        run: pnpm typecheck
+      - name: Lint
+        if: steps.checkout.outcome == 'success'
+        run: pnpm lint
+      - name: Test with coverage
+        if: steps.checkout.outcome == 'success'
+        run: pnpm test:coverage
+      - name: Done-criteria expectations per branch
+        if: steps.checkout.outcome == 'success'
+        shell: bash
+        run: |
+          set -euo pipefail
+          expect_fail() { if pnpm run "$1" --static; then echo "$1 passed on ${{ matrix.branch }} but must fail"; exit 1; fi; }
+          expect_pass() { pnpm run "$1" --static; }
+          case "${{ matrix.branch }}" in
+            00-setup) echo "no check scripts on 00-setup" ;;
+            01-start) expect_fail check:01 ;;
+            01-done|02-start) expect_pass check:01; [ "${{ matrix.branch }}" = 02-start ] && expect_fail check:02 || true ;;
+            02-done|03-start) expect_pass check:01; expect_pass check:02; [ "${{ matrix.branch }}" = 03-start ] && expect_fail check:03 || true ;;
+            03-done|final) expect_pass check:01; expect_pass check:02; expect_pass check:03 ;;
+          esac
+      - name: Optimizer tests (final only)
+        if: steps.checkout.outcome == 'success' && matrix.branch == 'final'
+        uses: astral-sh/setup-uv@v6
+      - name: Optimizer tests run (final only)
+        if: steps.checkout.outcome == 'success' && matrix.branch == 'final'
+        working-directory: optimize
+        run: uv sync --frozen && uv run pytest && uv run contract_test.py --render-only
+      - name: Backend image builds (00-setup and final)
+        if: steps.checkout.outcome == 'success' && (matrix.branch == '00-setup' || matrix.branch == 'final')
+        run: docker build -f infra/backend/Dockerfile -t talk-picker-backend:ci .

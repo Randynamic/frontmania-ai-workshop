@@ -1,0 +1,25 @@
+{
+  "role": "Accessibility engineer in a design-system team",
+  "seniority": "senior",
+  "stack": [
+    "HTML",
+    "CSS",
+    "TypeScript",
+    "React",
+    "Web Components",
+    "Lit",
+    "Storybook",
+    "Playwright",
+    "axe-core",
+    "design tokens"
+  ],
+  "interests": [
+    "application-level accessibility",
+    "live regions and dynamic content",
+    "CSS as a state machine",
+    "design-system governance and adoption",
+    "accessibility of AI-generated interfaces",
+    "motion and reduced-motion preferences"
+  ],
+  "avoid": ["backend infrastructure", "Kubernetes", "blockchain", "release-engineering process"]
+}

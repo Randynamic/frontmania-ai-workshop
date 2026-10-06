@@ -1,0 +1,40 @@
+# LiteLLM proxy config. Participants only ever see the three aliases below;
+# upstream models are Gemini on Google Vertex AI (vertex_ai/<model>), named in infra/.env.
+# Credentials: the service-account JSON mounted read-only at VERTEX_CREDENTIALS (docker-compose.yml).
+# Verify at the D-1 spike: `os.environ/` resolution for `model` (documented for
+# api_key; confirm for model by calling GET /v1/models with a virtual key).
+model_list:
+  - model_name: talk-picker-task
+    litellm_params:
+      model: os.environ/TASK_MODEL_UPSTREAM
+      # Gemini 2.5 Flash thinks by default; off for the participant task model (latency, cost, max_tokens)
+      reasoning_effort: disable
+      vertex_project: os.environ/VERTEX_PROJECT
+      vertex_location: os.environ/VERTEX_LOCATION
+      vertex_credentials: os.environ/VERTEX_CREDENTIALS
+  - model_name: talk-picker-embed
+    litellm_params:
+      model: os.environ/EMBED_MODEL_UPSTREAM
+      vertex_project: os.environ/VERTEX_PROJECT
+      vertex_location: os.environ/VERTEX_LOCATION
+      vertex_credentials: os.environ/VERTEX_CREDENTIALS
+  - model_name: talk-picker-reflect
+    litellm_params:
+      model: os.environ/REFLECT_MODEL_UPSTREAM
+      vertex_project: os.environ/VERTEX_PROJECT
+      vertex_location: os.environ/VERTEX_LOCATION
+      vertex_credentials: os.environ/VERTEX_CREDENTIALS
+
+litellm_settings:
+  # Privacy: never log request or response bodies (CV text passes through here).
+  turn_off_message_logging: true
+  drop_params: true
+  success_callback: []
+  failure_callback: []
+  request_timeout: 60
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+  database_url: os.environ/DATABASE_URL
+  store_model_in_db: false
+  disable_spend_logs: false
